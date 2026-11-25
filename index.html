@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALAR THIRUKKURAL (மலர்த் திருக்குறள்) 3 Pillars • 13 Sub-Pillars • 133 Chapters • 1,330 Botanical Couplets</title>
+<meta name="description" content="3.5 Billion Years of Botanical Wisdom & Floral Teachings in Classical Tamil Prosody. Aram, Porul and Inbam Discovered Through the Silent Survival Laws of 133 Blooms.">
+    <!-- =========================================================
+         GOOGLE FONTS: Lightweight Classical & Literary Pairing
+         ========================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =========================================================
+         SECTION 1A: TOP HEADER (Logo, Clickable Tabs & Live Counters)
+         ========================================================= -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- Left Corner: Brand Logo -->
+            <a href="#" class="logo-box" aria-label="Malar Kurals Home">
+                <img id="site-logo" src="" alt="Malar Kurals Logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+                <div id="logo-fallback" class="logo-fallback" style="display: none;">
+                    <span>MK</span>
+                </div>
+            </a>
+
+            <!-- Right Column: Navigation Tabs + Breathing Space + Live Counters -->
+            <div class="header-right">
+
+                <!-- Top Row: MALAR KURALS Gateway Tab FIRST, followed by 5 Info Tabs -->
+                <nav class="main-nav" aria-label="Primary Navigation">
+                    <a href="#malar-kurals-section" class="nav-btn nav-btn-featured">Malar Kurals</a>
+                    <button class="nav-btn" data-modal="about">About</button>
+                    <button class="nav-btn" data-modal="vision">Vision</button>
+                    <button class="nav-btn" data-modal="esd">ESD2030 &amp; SDG</button>
+                    <button class="nav-btn" data-modal="mission">Mission</button>
+                    <button class="nav-btn" data-modal="author">About Author</button>
+                </nav>
+
+                <!-- Bottom Row: Automated Counters (Updated dynamically via folder scan + kurals-datas.js) -->
+                <div class="counter-strip" aria-label="Project Progress Counters">
+                    <div class="counter-pill">
+                        <span class="counter-label">Image Count</span>
+                        <span class="counter-value">
+                            <strong id="image-count-current">00</strong> / <span id="image-count-total">133</span>
+                        </span>
+                    </div>
+                    <div class="counter-pill">
+                        <span class="counter-label">Kural Count</span>
+                        <span class="counter-value">
+                            <strong id="kural-count-current">00</strong> / <span id="kural-count-total">1330</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             SECTION 1B: FULL UNCROPPED HERO IMAGE & TITLE PLATE
+             ========================================================= -->
+        <section class="hero-section" aria-label="Hero Banner and Introduction">
+
+            <div class="hero-image-wrapper">
+                <img id="hero-image" src="" alt="Malar Kurals Botanical Landscape" onerror="this.classList.add('missing-img');">
+                <div id="hero-placeholder-text" class="placeholder-hint">
+                    Place your wide photograph at <code>assets/hero-banner.jpg</code>
+                </div>
+            </div>
+
+            <div class="title-plate-container">
+                <div class="title-plate">
+                    <div class="ornament-line" aria-hidden="true"></div>
+
+                    <!-- TIER 1: Main Bilingual Title (H1) & Architecture Tally -->
+                    <h1 class="main-title">
+                        <span class="title-eng">MALAR THIRUKKURAL</span>
+                        <span class="tamil-text title-tamil">(மலர்த் திருக்குறள்)</span>
+                    </h1>
+                    <p class="title-stats">
+                        3 Pillars &bull; 13 Sub-Pillars &bull; 133 Chapters &bull; 1,330 Botanical Couplets
+                    </p>
+
+                    <div class="title-divider" aria-hidden="true"></div>
+
+                    <!-- TIER 2: Subtitle / Positioning Line (H2) -->
+                    <h2 class="main-positioning">
+                        3.5 Billion Years of Botanical Wisdom &amp; Floral Teachings in Classical Tamil Prosody
+                    </h2>
+                    <p class="main-subtitle">
+                        Aram, Porul and Inbam Discovered Through the Silent Survival Laws of 133 Blooms
+                    </p>
+
+                    <!-- TIER 3: Punchy Hero Quote Plaque -->
+                    <blockquote class="hero-quote-box">
+                        <p class="hero-quote-text">
+                            &ldquo;Human traits are still under R&amp;D ; a wildflower has perfected the art of living for 3.5 billion years.&rdquo;
+                        </p>
+                    </blockquote>
+
+                    <div class="ornament-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             SECTION 2: FEATURED SHOWCASE (One Flower, One Chapter)
+             ========================================================= -->
+        <section class="showcase-section" aria-label="Featured Flower Chapter Preview">
+            <div class="showcase-frame">
+
+                <header class="showcase-header">
+                    <h2 id="showcase-tamil-heading" class="tamil-text showcase-tamil-title"></h2>
+                    <p id="showcase-english-heading" class="showcase-english-subtitle"></p>
+                </header>
+
+                <figure class="flower-frame-wrapper">
+                    <div class="flower-mat">
+                        <img id="showcase-flower-img" src="" alt="Sample Flower Bloom" onerror="this.classList.add('missing-img');">
+                        <div id="flower-placeholder-text" class="placeholder-hint">
+                            Place your flower photo at <code>assets/sample-flower.jpg</code>
+                        </div>
+                    </div>
+                </figure>
+
+                <div class="kural-plaque">
+                    <p id="showcase-kural-line1" class="tamil-text kural-line"></p>
+                    <p id="showcase-kural-line2" class="tamil-text kural-line"></p>
+                </div>
+
+                <article class="humanity-message-box">
+                    <h3 id="showcase-message-title" class="message-heading">The Message to Humanity</h3>
+                    <p id="showcase-message-body" class="message-body"></p>
+                </article>
+
+            </div>
+        </section>
+
+
+
+<!-- =========================================================
+             SECTION 2B: OUR DISCOVERY (Cracking the Botanical Blueprint)
+             Sits directly above the Malar Kurals Databank
+             ========================================================= -->
+        <section id="our-discovery" class="discovery-section" aria-label="Our Discovery — Cracking the Botanical Blueprint of Thirukkural">
+            <div class="discovery-frame">
+
+                <!-- Discovery Header & Opening Thesis -->
+                <header class="discovery-header">
+                    <span class="discovery-eyebrow">Our Discovery</span>
+                    <h2 class="discovery-title">Cracking the Botanical Blueprint of Thirukkural</h2>
+                    <div class="discovery-divider" aria-hidden="true"></div>
+                    <div class="discovery-lead">
+                        <p>
+                            Over 2,000 years ago, Thiruvalluvar encoded the complete architecture of human ethics, governance and love into 1,330 timeless couplets.
+                        </p>
+                        <p>
+                            Through deep observation of the natural world, we uncovered a remarkable parallel: that exact same architectural formula already exists in the silent, 3.5-billion-year survival design of flowers.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- Part 1: Side-by-Side Parallel Architecture Diptych -->
+                <div class="discovery-block">
+                    <div class="discovery-subhead-wrap">
+                        <span class="discovery-subhead-line" aria-hidden="true"></span>
+                        <h3 class="discovery-subhead">The Parallel Architecture</h3>
+                        <span class="discovery-subhead-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="parallel-grid">
+
+                        <!-- Left Card: Original Thirukkural -->
+                        <article class="parallel-card parallel-card-classic">
+                            <div class="parallel-card-header">
+                                <div class="parallel-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="parallel-heading-group">
+                                    <span class="parallel-tag">2,000+ Years &bull; Classical Human Code</span>
+                                    <h4 class="parallel-title">ORIGINAL THIRUKKURAL</h4>
+                                </div>
+                            </div>
+
+                            <ul class="parallel-list">
+                                <li>
+                                    <span class="parallel-label">The Lens</span>
+                                    <p>Human psychology, social conduct and behavioral discipline.</p>
+                                </li>
+                                <li>
+                                    <span class="parallel-label">The Method</span>
+                                    <p>Examines human traits across 3 Pillars (Aram, Porul, Inbam), 13 Sub-Pillars and 133 Chapters to guide society toward righteous living.</p>
+                                </li>
+                                <li>
+                                    <span class="parallel-label">The Challenge</span>
+                                    <p>Asks imperfect humans to consciously restrain ego, desire and conflict to achieve harmony.</p>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <!-- Right Card: Malar Thirukkural (Elevated Gold-Glow Highlight) -->
+                        <article class="parallel-card parallel-card-malar">
+                            <div class="parallel-card-header">
+                                <div class="parallel-icon parallel-icon-gold" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22v-9"/>
+                                        <path d="M12 13C12 8 7 6 3 7c0 4 3 7 9 6z"/>
+                                        <path d="M12 13c0-5 5-7 9-6 0 4-3 7-9 6z"/>
+                                        <circle cx="12" cy="6" r="2.2"/>
+                                    </svg>
+                                </div>
+                                <div class="parallel-heading-group">
+                                    <span class="parallel-tag parallel-tag-gold">3.5 Billion Years &bull; Living Botanical Code</span>
+                                    <h4 class="parallel-title">
+                                        MALAR THIRUKKURAL
+                                        <span class="tamil-text parallel-title-tamil">(மலர்த் திருக்குறள்)</span>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <ul class="parallel-list">
+                                <li>
+                                    <span class="parallel-label">The Lens</span>
+                                    <p>3.5 billion years of proven biological wisdom and evolutionary design.</p>
+                                </li>
+                                <li>
+                                    <span class="parallel-label">The Method</span>
+                                    <p>Maps the exact same 3 Pillars, 13 Sub-Pillars and 133 Chapters onto 133 distinct blooms, decoding universal truths strictly through botanical anatomy and survival strategies.</p>
+                                </li>
+                                <li>
+                                    <span class="parallel-label">The Revelation</span>
+                                    <p>Every thorn, root network, nectar exchange and blooming cycle becomes a silent, living lesson in how to thrive with integrity and ensure continuity.</p>
+                                </li>
+                            </ul>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Part 2: Two Teachers, One Eternal Truth Finale Plaque -->
+                <div class="truth-plaque">
+                    <h3 class="truth-heading">Two Teachers, One Eternal Truth</h3>
+
+                    <div class="truth-grid">
+                        <article class="truth-card">
+                            <span class="truth-badge">Same Eternal Truth</span>
+                            <p>
+                                Just like Valluvar&rsquo;s verses, blooms demonstrate that aligning with the Source, remaining unstained by a harsh environment and rising above adversity leads to true liberation and greatness.
+                            </p>
+                        </article>
+
+                        <article class="truth-card">
+                            <span class="truth-badge">Different Teacher</span>
+                            <p>
+                                Thiruvalluvar urged humans to discipline their minds to attain these virtues&mdash;a goal humanity is still striving to master. Nature&rsquo;s flowers reveal that they already practice this effortlessly through ~3.5 billion years of evolutionary design and self-governance.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+<!-- =========================================================
+             SECTION 3: MALAR KURALS 3-TIER ORG-CHART DATABANK
+             Tier 1: Master Root -> Tier 2: 3 Pillars -> Tier 3: 13 Iyals -> Chapters
+             ========================================================= -->
+        <section id="malar-kurals-section" class="databank-section" aria-label="Malar Kurals 133-Chapter Databank">
+            <div class="databank-container">
+
+                <header class="databank-header">
+                    <span class="databank-eyebrow">Classical 3-Pillar &bull; 13-Iyal Architecture</span>
+                    <h2 class="databank-title">MALAR KURALS DATABANK</h2>
+                    <p class="tamil-text databank-tamil-sub">அறம் &bull; பொருள் &bull; இன்பம் — 133 மலர்கள், 13 இயல்கள், 1,330 குறள்கள்</p>
+                    <p class="databank-desc">
+                        Navigate the living architecture below—select a Pillar and Sub-Pillar (Iyal) to explore its chapters, unedited blooms, and couplets.
+                    </p>
+                </header>
+
+                <!-- ORGANIZATION CHART NAVIGATION TREE -->
+                <div class="org-chart-wrapper" aria-label="Thirukkural Organization Chart Navigation">
+
+                    <!-- TIER 1: Master Root Node (Click anytime to view All Blooms) -->
+                    <div class="org-root-tier">
+                        <button id="org-root-btn" class="org-root-node" type="button">
+                            <span class="org-node-eyebrow">Master Sanctuary &bull; View All Published Blooms</span>
+                            <span class="tamil-text org-root-tamil">முப்பால் — திருக்குறள் கட்டமைப்பு</span>
+                            <span class="org-root-meta">
+                                3 Pillars &bull; 13 Sub-Pillars (Iyals) &bull; 133 Chapters &bull;
+                                <strong id="org-root-progress">00 / 133 Blooms Ready</strong>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Golden Org-Chart Vertical Connector Stem (Root -> Pillars) -->
+                    <div class="org-stem-down" aria-hidden="true"></div>
+
+                    <!-- TIER 2: 3 Main Pillar Nodes (Auto-built by script.js) -->
+                    <div id="org-pillars-grid" class="org-pillars-grid" role="tablist" aria-label="Three Main Pillars">
+                        <!-- Aram (Ch. 1–38), Porul (Ch. 39–108), Inbam (Ch. 109–133) load here -->
+                    </div>
+
+                    <!-- TIER 3: Sub-Pillar (Iyal) Branch Container (Opens under active Pillar) -->
+                    <div id="org-iyal-branch" class="org-iyal-branch">
+                        <div class="org-stem-down" aria-hidden="true"></div>
+                        <div class="org-iyal-panel">
+                            <div class="org-iyal-panel-header">
+                                <span id="org-iyal-branch-label" class="org-iyal-branch-label"></span>
+                                <button id="org-show-whole-pillar-btn" class="org-pillar-all-btn" type="button">
+                                    Show All in This Pillar
+                                </button>
+                            </div>
+                            <div id="org-iyals-grid" class="org-iyals-grid" role="tablist" aria-label="Sub-Pillars">
+                                <!-- 4 Aram Iyals, 7 Porul Iyals, or 2 Inbam Iyals load here -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ACTIVE BRANCH CONTEXT BAR (Shows exact Pillar, Iyal & Chapter Range selected) -->
+                <div id="active-branch-bar" class="active-branch-bar">
+                    <!-- Auto-filled by script.js -->
+                </div>
+
+                <!-- AUTOMATED CHAPTERS GRID (Blooms belonging to the selected branch) -->
+                <div id="chapters-grid" class="chapters-grid">
+                    <!-- Bloom cards load automatically here -->
+                </div>
+
+            </div>
+        </section>
+
+
+</main>
+
+
+<!-- =========================================================
+         SECTION 4: SITE FOOTER (Closing Kural, Motto & Continuity Bar)
+         ========================================================= -->
+    <footer class="site-footer" aria-label="Site Footer and Copyright">
+        <div class="footer-container">
+
+            <!-- Framed Closing Kural & Author Motto Plaque -->
+            <div class="footer-quote-plaque">
+                <span class="footer-eyebrow">நிறைவுக் குறள் &bull; The Closing Echo</span>
+
+                <!-- Classical 4+3 Word Tamil Couplet (Strict 2-Line Cadence) -->
+                <div class="footer-kural-block">
+                    <p class="tamil-text footer-kural-line">ஒருமுறை பூத்தெழும் செம்மை அறச்சொல்</p>
+                    <p class="tamil-text footer-kural-line">பெருநிலம் கேட்கும் முழக்கு.</p>
+                </div>
+
+                <div class="footer-mini-divider" aria-hidden="true"></div>
+
+                <!-- Signature English Motto -->
+                <blockquote class="footer-motto">
+                    &ldquo;Speak once&mdash;yet so powerfully that the echoes of the word, carried by the righteousness of its meaning, compel the world to listen.&rdquo;
+                </blockquote>
+            </div>
+
+            <!-- Bottom Copyright & Planetary Continuity Strip -->
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">
+                    <span class="footer-copy-year">&copy; 2026</span>
+                    <span class="footer-sep" aria-hidden="true">|</span>
+                    <span class="footer-pledge">FOR PLANET. FOR FUTURE; FOR LEGACY. FOR CONTINUITY.</span>
+                </p>
+                <a href="#" class="footer-top-link" aria-label="Return to top of page">
+                    <svg class="top-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 19V5"/>
+                        <path d="M5 12l7-7 7 7"/>
+                    </svg>
+                    <span>Back to Top</span>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <!-- =========================================================
+         MODAL 1: TOP NAVIGATION INFO MODAL (About, Vision, ESD, etc.)
+         ========================================================= -->
+    <div id="info-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-card">
+            <button id="modal-close-btn" class="modal-close" aria-label="Close window">&times;</button>
+            <span id="modal-tag" class="modal-tag"></span>
+            <h2 id="modal-title" class="modal-title"></h2>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         MODAL 2: FULL CHAPTER READING SANCTUARY
+         Opens when clicking any bloom card in the Databank
+         ========================================================= -->
+    <div id="chapter-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="ch-modal-title" hidden>
+        <div class="modal-card chapter-modal-card">
+            <button id="ch-modal-close-btn" class="modal-close" aria-label="Close chapter">&times;</button>
+
+            <div class="ch-modal-header">
+                <span id="ch-modal-meta" class="modal-tag"></span>
+                <h2 id="ch-modal-title" class="modal-title"></h2>
+                <p id="ch-modal-tamil-title" class="tamil-text ch-modal-tamil-title"></p>
+            </div>
+
+            <!-- Uncropped Full Bloom Photograph -->
+            <div class="ch-modal-photo-frame">
+                <img id="ch-modal-img" src="" alt="Chapter Bloom Photograph">
+            </div>
+
+            <!-- Chapter Summary Box -->
+            <div class="ch-summary-box">
+                <h3 class="ch-sub-heading">Chapter Summary</h3>
+                <p id="ch-modal-summary" class="ch-summary-text"></p>
+            </div>
+
+            <!-- List of 10 Kurals & Meanings -->
+            <div class="ch-kurals-wrapper">
+                <h3 class="ch-sub-heading">Couplets &amp; Meanings</h3>
+                <div id="ch-modal-kurals-list" class="ch-kurals-list">
+                    <!-- Populated automatically from js/kurals-datas.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- =========================================================
+         SCRIPTS: Load Site Settings -> 3 Pillar Databanks -> Engine
+         ========================================================= -->
+    <script src="js/datas.js"></script>
+    <script src="js/aram-datas.js"></script>
+    <script src="js/porul-datas.js"></script>
+    <script src="js/inbam-datas.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
