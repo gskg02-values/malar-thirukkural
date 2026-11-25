@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌸 மலர்க் குறள் — NATURE KURAL 🌿
+# 🌸 மலர்த் திருக்குறள் — MALAR TIRUKKURAL 🌿
 ### *Decoding Deep Time into Living Wisdom for Planetary Continuity*
 
 🌍 **133 Chapters** • 🌺 **133 Flowering Species** • 📜 **1,330 High-Senthamil Couplets** • 🌱 **Zero-Budget Open-Source Legacy**
@@ -25,7 +25,7 @@ Built from the ground up as a **zero-budget, citizen-led rural sanctuary**, the 
 
 ---
 
-## 🪷 About the Nature Kural (*மலர்க் குறள்*)
+## 🪷 About the Malar Kurals (*மலர்க் குறள்*)
 
 Over two millennia ago, the great sage **Thiruvalluvar** observed human society—kings, farmers, scholars, and households—and distilled universal human ethics into 1,330 seven-word couplets across the *Thirukkural*.
 
