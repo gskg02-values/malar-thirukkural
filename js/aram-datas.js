@@ -1307,9 +1307,528 @@ const ARAM_CHAPTERS_DATA = [
                     "While the unripe green berry of the Magizham tree is fiercely astringent and puckering with raw tannins, its fully ripened orange-red fruit is soft, sweet, and nourishing to birds and humans alike. Choosing harsh, wounding speech when pleasant words are right within reach is exactly like passing over sweet ripe fruit to bite into bitter unripe pods."
             }
         ]
-    }
+    },
 
     // ======================================================================
-    // NEXT CHAPTER (CHAPTER 11: செய்ந்நன்றி அறிதல்) GOES RIGHT HERE!
+    // CHAPTER 11: செய்ந்நன்றியறிதல் — தென்னம்பூ (Kurals 101–110)
     // ======================================================================
+    {
+        chapterNumber: 11,                      // Automatically loads images/11.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "செய்ந்நன்றியறிதல் — தென்னம்பூ",
+        chapterTitle: "Gratitude – The Coconut Blossom",
+        flowerName: "The Coconut Blossom (தென்னம்பூ)",
+        tamilSummary:
+            "முன்பணி நாடாது தானே நற்கொடை ஈந்து, கடும் வேனிலிலும் தக்க பொழுதில் தேன் துளித்து, விலைகருதாமல் ஆயிரக்கணக்கான பூக்களில் மகரந்தம் தூவி, வேர்தீண்டும் சிறுதுளியை வான்குலையாய்ப் பெருக்கி, உவர்ப்புனலைத் தீஞ்சாற்று நீராவாய் மாற்றி, புயலில் காத்த பன்னாடைப் பிணைப்பைப் பேணி, பல பத்தாண்டுகள் திங்கள் தவறாமல் பூத்து, காரத்தை உடனே கழித்து ஈரத்தை உச்சிவரை காத்து, அரிந்த புண்ணிலும் தீமருந்தான சாற்றை ஊற்றி, மடல்சாய்ந்தாலும் வாழ்ந்து குருத்தழிந்தால் மீளாமல் மாயும் தென்னம்பூவின் வாழ்வியல் — செய்த நன்மையை ஒருபோதும் மறவாமல் பெருக்கிப் போற்றுவதும், தீமையை உடனே கழிப்பதுமே வாழ்வின் அழியாத அறக்கடன் என்பதைக் குறள்கள் 101–110 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified floral and physiological designs of the Coconut Blossom, Chapter 11 reveals gratitude as the living circulatory law that keeps ecosystems and civilizations alive. Unprompted generosity outweighs both earth and heaven (101); timely aid in scorching scarcity surpasses the whole globe (102); selfless giving without calculating profit runs deeper than the sea (103); discerning hearts magnify even a tiny drop of care into a towering mountain (104); the true worth of a favor is defined by the noble character of the recipient (105); one must never abandon spotless companions who stood firm in storms (106); noble gratitude endures across decades and generations without faltering (107); refined character discards bitterness immediately while preserving every trace of kindness (108); recalling a single past goodness dissolves even a sharp wound into healing sweetness (109); and just as a palm survives torn fronds yet dies irreversibly when its central crown is severed, betraying gratitude leaves no path back to wholeness (110).",
+        architecturalArc: [
+            {
+                range: "101–103",
+                phase: "Measureless Giving",
+                traits: "Unassisted coastal bloom • Dry-season timely nectar • Thousands of freely shared pollen florets"
+            },
+            {
+                range: "104–106",
+                phase: "Magnification & Bond",
+                traits: "Root drop turned sky-high cluster • Brackish water turned sweet neera • Woven fiber sheath bracing storms"
+            },
+            {
+                range: "107–109",
+                phase: "Memory & Forgiveness",
+                traits: "Monthly blooming for 70+ years • Instant root salt-filtration • Sliced spathe yielding healing neera"
+            },
+            {
+                range: "110",
+                phase: "The Sacred Core",
+                traits: "Storm-torn fronds regrow vs. severed apical crown — gratitude as life's irreplaceable heart"
+            }
+        ],
+        greenThinkingPrinciple:
+            "Gratitude is nature's highest multiplier—take plain care at the roots, filter out every trace of salt and bitterness immediately, return sweetness month after month without tallying debts, and guard the grateful core that keeps life regenerating.",
+        kurals: [
+            {
+                kuralNumber: 101,
+                line1: "முன்பணி நாடாது தெங்கீந்த நற்கொடைக்கு",
+                line2: "மன்னுலகும் விண்ணுலகும் தாழ்வு.",
+                tamilPorul:
+                    "தனக்கு முன் எவ்விதப் பணியும் பராமரிப்பும் நாடாமல் தானே முளைத்துப் பூத்து நற்கொடை வழங்கும் தென்னை மரத்தின் ஈகைக்கு, இந்த நிலைத்த மண்ணுலகும் மேலுள்ள விண்ணுலகும் ஈடாகாமல் தாழ்ந்தே நிற்கும்.",
+                meaning:
+                    "Engineered through deep-time coastal resilience, a fallen coconut germinates unassisted and unfolds its golden inflorescence to shower pollinators and communities with nectar, pollen, and fruit without ever awaiting prior care. Kindness rendered without expecting or receiving any earlier favor outweighs both earth and heaven combined."
+            },
+            {
+                kuralNumber: 102,
+                line1: "வேனில் வறட்சியில் பாளை துளித்ததேன்",
+                line2: "மாநிலத்தின் மேலாம் உயர்வு.",
+                tamilPorul:
+                    "மற்ற பூக்களெல்லாம் கருகி மறையும் கடும் கோடை வேனில் வறட்சியிலும் தவறாமல் விரியும் தென்னம்பாளை துளித்த சிறிதளவு தேனும் நீராவும் போல, உற்ற நெருக்கடிப் பொழுதில் செய்த சிறு நன்மையும் இந்தப் பரந்த மாநிலத்தைக் காட்டிலும் மேலான உயர்வாகும்.",
+                meaning:
+                    "Opening faithfully even through scorching dry-season heat when surrounding blossoms vanish, the coconut spadix offers timely droplets of nectar and refreshing sap to thirsty bees and living beings. Help extended in the exact hour of need, however small in measure, towers far above the entire world."
+            },
+            {
+                kuralNumber: 103,
+                line1: "விலைகருதாத் தென்னம்பூத் தூவிடும் தாது",
+                line2: "அலையாழி ஆழத்தின் மேல்.",
+                tamilPorul:
+                    "கைம்மாறாக எவ்வித விலையும் கருதாமல் வண்டுகளுக்கும் காற்றிற்கும் ஆயிரக்கணக்கான பூக்களிலிருந்து மகரந்தத் தாதைத் தாராளமாகத் தூவிடும் தென்னம்பூவின் பெருந்தன்மை, அலைவீசும் ஆழ்கடலின் ஆழத்தையும் விட மேலானதாகும்.",
+                meaning:
+                    "Releasing clouds of golden pollen from thousands of tiny male florets across every radiating spike without measuring return or withholding a single grain, the coconut blossom sustains whole pollinator colonies effortlessly. When measured by its pure graciousness, generosity offered without weighing personal gain runs deeper than the ocean."
+            },
+            {
+                kuralNumber: 104,
+                line1: "சிறுதுளி வேர்தீண்டின் வான்குலை ஆக்கும்",
+                line2: "உறுமலையாய்ப் போற்றும் மதி.",
+                tamilPorul:
+                    "வேரில் வார்க்கும் ஒரு சிறுதுளி நீரைக்கூட ஏற்றுக்கொண்டு வானளாவிய உச்சியில் பெரிய பூங்குலையாகவும் கனிகளாகவும் பெருக்கித் தரும் தென்னையைப் போல, பயன் உணரும் தெளிந்த மதி கொண்டோர் சிறிய நன்மையையும் உயர்ந்த மலையாகப் போற்றி ஏற்பர்.",
+                meaning:
+                    "Receiving even a modest trickle of plain water at its base, the palm magnifies that humble care upward into towering floral spikes and heavy fruit clusters crowned high in the sky. Those who truly grasp the value of goodness treasure even a speck of kindness as an immense mountain."
+            },
+            {
+                kuralNumber: 105,
+                line1: "உவர்ப்புனலும் தீஞ்சாறாய் மாறிடும் நீரா",
+                line2: "உவந்தேற்றோர் மாண்பின் அளவு.",
+                tamilPorul:
+                    "கடற்கரை மண்ணின் உப்பு நிறைந்த உவர்ப்புனலை உறிஞ்சினாலும், தன் உயர்ந்த இயல்பால் அதனை இனிமை நிறைந்த தீஞ்சாறான நீராவாக மாற்றும் தென்னம்பாளையைப் போல, ஒரு நன்மையின் பெருமை அந்நன்மையை உவந்து ஏற்றவரின் அகமாண்பின் அளவாலேயே மதிக்கப்படும்.",
+                meaning:
+                    "Drawing brackish, mineral-heavy groundwater from coastal sands, the coconut blossom's refined internal architecture transforms plain salty moisture into crystal-sweet neera nectar and tender elixir. The true stature of a kindness is never fixed by the size of the gift—it is measured by the inner nobility of the heart that receives it."
+            },
+            {
+                kuralNumber: 106,
+                line1: "புயல்சூழப் பன்னாடை காத்திடும் பூப்போல்",
+                line2: "அயர்தீர்த்த தூயோர் விடேல்.",
+                tamilPorul:
+                    "கடும் புயலும் காற்றும் சூழும்போது இளம் தென்னம்பாளையை இறுகப் பிணைந்து பாதுகாக்கும் இயற்கைப் பன்னாடையைப் போல, மாசற்ற தூய உள்ளத்தாரின் பிணைப்பையும் துயரத்தில் அயர்வு தீர்த்துத் தாங்கியோரின் துணையையும் ஒருபோதும் கைவிடாதே.",
+                meaning:
+                    "Wrapped tightly inside a woven natural fiber sheath and a rugged woody spathe that brace the emerging flower spikes against fierce tropical gales, the blossom never severs the protective grip that sheltered its tender emergence. Never forget the bond of the spotless, and never forsake those who stood as strength in your hour of distress."
+            },
+            {
+                kuralNumber: 107,
+                line1: "பல்லாண்டு திங்கள் தவறாது பூத்திடும்",
+                line2: "அல்லல் களைந்தார் நினைவு.",
+                tamilPorul:
+                    "ஒருமுறை நட்டு நீரூற்றி வளர்த்த கைம்மாறாகப் பல பத்தாண்டுகள் ஒவ்வொரு திங்களும் தவறாமல் புதிய பாளை விரித்துப் பூக்கும் தென்னையைப் போல, தம் அல்லலைக் களைந்து காத்தவரின் நினைவைச் சான்றோர் பல தலைமுறை கடந்தும் போற்றிப் பேணுவர்.",
+                meaning:
+                    "Repaying minimal early care with an unbroken rhythm of one fresh inflorescence every single month for seventy to eighty years, the coconut palm honors its planter across successive human generations. Noble hearts carry the living remembrance of those who wiped away their affliction across lifetimes without fading."
+            },
+            {
+                kuralNumber: 108,
+                line1: "காரம் உடனே கழித்துக் கனிதரும்",
+                line2: "ஈரம் அகலாமை சீர்.",
+                tamilPorul:
+                    "மண்ணிலிருந்து உறிஞ்சும் உப்புக் காரத்தையும் கசப்பையும் வேரடியிலேயே உடனடியாகக் கழித்துவிட்டு, தூய நீரின் ஈரத்தை மட்டும் உச்சிவரை காத்துக் கனி தரும் தென்னையைப் போல, பிறர் செய்த தீமையை அப்போதே விலக்கிவிட்டுச் செய்த நன்மையின் ஈரத்தை நெஞ்சிலிருந்து அகற்றாமல் காப்பதே உயர்ந்த சீராகும்.",
+                meaning:
+                    "Filtering out coastal salt and harsh impurities instantaneously at its roots while preserving only pure sweetness all the way to its blooming crown, the palm refuses to carry bitterness upward. Remembering a kindness faithfully while letting an injury drop on the very same day is the mark of refined character."
+            },
+            {
+                kuralNumber: 109,
+                line1: "அரிந்தபுண் தீமருந்தாய் ஊறும் மலர்போல்",
+                line2: "புரிநலம் உன்ன அறும்.",
+                tamilPorul:
+                    "கூரிய கத்தியால் தன் பாளை நுனியை அரிந்து புண்படுத்திய போதும், கசப்பையோ நஞ்சையோ கக்காமல் இனிய தீமருந்தான நீராவை ஊற்றித் தரும் தென்னம்பூவைப் போல, பிறர் உயிர்க்கொலை ஒத்த கொடுமை செய்தாலும் அவர் முன்பு புரிந்த ஒரு நலத்தை நினைத்த அளவிலேயே அந்தத் துயரம் அற்றுப்போகும்.",
+                meaning:
+                    "Even when the tip of the unopened spathe is sliced repeatedly by a sharp blade, the coconut inflorescence answers not with venom or bitterness, but by welling up with restorative, sweet medicinal neera sap. Even a devastating wrong dissolves the moment one recalls a single past act of kindness from that hand."
+            },
+            {
+                kuralNumber: 110,
+                line1: "மடல்சாய்ந்தும் வாழும் குருத்தழிய மாயும்",
+                line2: "கடன்சிதைப்பார் மீளா அழிவு.",
+                tamilPorul:
+                    "புறத்தே உள்ள ஓலை மடல்கள் புயலில் சாய்ந்து முறிந்தாலும் மீண்டும் தளிர்த்து வாழும் தென்னை, தன் மைய உயிர்க் குருத்து அழிந்தால் மீளாமல் மாய்ந்து போவது போல, பிற அறங்களைச் சிதைத்தோர்க்கு மீட்சி இருந்தாலும் செய்ந்நன்றிக் கடனைச் சிதைப்பார்க்கு மீளாத அழிவே நேரும்.",
+                meaning:
+                    "Resilient enough to survive storm-torn fronds and scarred trunks by sprouting fresh foliage year after year, the coconut palm possesses only one single apical heart—if that central crown is destroyed, the entire tree perishes with zero possibility of regrowth. While redemption remains possible for other failures, destroying the sacred bond of gratitude brings irreversible ruin."
+            }
+        ]
+    },
+
+    // ======================================================================
+    // CHAPTER 12: நடுவு நிலைமை — சூரியகாந்தி (Kurals 111–120)
+    // ======================================================================
+    {
+        chapterNumber: 12,                      // Automatically loads images/12.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "நடுவு நிலைமை — சூரியகாந்தி",
+        chapterTitle: "Impartiality – The Radiant Sunflower",
+        flowerName: "The Radiant Sunflower (சூரியகாந்தி)",
+        tamilSummary:
+            "சுழல்கணக்கில் நூற்றுக்கணக்கான நுண்மலர்களை ஒப்பவே பூக்கவைத்து, சமமான பூம்பரப்பில் நெய்வித்துகளை வளர்த்துப் பின்னோர்க்குக் காப்பாகி, சமநிலை பிறழும் சாய்தண்டின் மிகைவளத்தை உடனே கழித்து, இதழுதிர்ந்த வேளையில் பதர்மணியால் மெய்யைக் காட்டி, ஏற்றமும் வீழ்வும் மாறிவரினும் அலர்வட்டமாய் மாற்றமில்லா உள்ளம் பூண்டு, அச்சு விலகின் உச்சிப்பூ சோர்வதால் அழிவை உணர்த்தி, பொன்வண்ணம் ஓய்ந்தும் பயன்சுமந்து கீழ்கவிழ்தலை மன்பதை வெற்றியாகப் போற்றச்செய்து, துலைநிகர் தட்டுப்பூவாய் எப்புறமும் சரியாமல் நிலைகொண்டு, அகம்திருந்திய தெளிவால் வெளிமடல் செம்மை காத்து, வண்டினம் ஊட்டியே சூல்கருவும் ஓம்பிப் பண்டமாற்றின் நெறி காட்டும் சூரியகாந்தியின் வாழ்வியல் — எவர் பக்கமும் சாயாத துல்லியமான சமநோக்கும் உள்ளொத்த நேர்மையுமே வாழ்வின் அழியாத அழகு என்பதைக் குறள்கள் 111–120 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified geometric and physiological designs of the Radiant Sunflower, Chapter 12 establishes impartiality not as passive neutrality, but as structural balance that keeps whole systems standing. Equity allocates fair space to every member without crowding (111), generates enduring wealth that shields future generations (112), rejects skewed gain the instant balance is threatened (113), reveals true character unmistakably through the harvest left behind (114), adorns life with unswerving inner poise through rise and fall alike (115), warns that deserting the central axis triggers collapse from within (116), proves that humble bowing under a heavy harvest is triumph rather than defeat (117), holds upright like a leveled weighing beam unbent toward any side (118), aligns straight outward speech with a clear, uncrooked core within (119), and makes commerce flourish by nourishing others' interests alongside one's own (120).",
+        architecturalArc: [
+            {
+                range: "111–113",
+                phase: "Mathematical Equity",
+                traits: "137.5-degree Golden Angle spiral • Uniform oil-rich seed supply • Rejecting stalk-breaking skewed weight"
+            },
+            {
+                range: "114–116",
+                phase: "Proof & Inner Axis",
+                traits: "Plump kernels vs. empty chaff • Mature eastward lock amid wind • Central vascular axis collapse"
+            },
+            {
+                range: "117–119",
+                phase: "Balance & Alignment",
+                traits: "Seed-laden autumn bow revered • Counterbalanced living beam-scale • Straight outer rays from straight inner disc"
+            },
+            {
+                range: "120",
+                phase: "Fair Exchange",
+                traits: "Gatekeeper-free nectar platform uniting pollinator nourishment with fertile seed-setting"
+            }
+        ],
+        greenThinkingPrinciple:
+            "Impartiality is nature's load-bearing geometry—distribute space and resources by fair measure, keep your inner axis aligned with your outer display, and build economies where feeding your partners is the exact mechanism that sustains your own harvest.",
+        kurals: [
+            {
+                kuralNumber: 111,
+                line1: "சுழல்கணக்கில் நுண்மலர்கள் ஒப்பவே பூத்தல்",
+                line2: "பழுதற்ற நேர்மையின் மாண்பு.",
+                tamilPorul:
+                    "சூரியகாந்தியின் வட்டத்துள் நூற்றுக்கணக்கான நுண்மலர்கள் துல்லியமான சுழல்கணக்கின்படி ஒன்றையொன்று நெருக்காமலும் மறைக்காமலும் ஒப்பவே பூத்து நிற்பது போல, பகைவர், நண்பர், அயலார் என யாவரிடத்தும் பாகுபாடின்றிப் பழுதற்ற நேர்மையோடு ஒழுகுவதே தலையாய மாண்பாகும்.",
+                meaning:
+                    "Engineered along interlocking Fibonacci spirals separated by the Golden Angle (137.5 degrees), the sunflower arranges hundreds of tiny disc florets so no single bloom shades, crowds, or steals space from another. Unblemished impartiality—rendering fair measure to friend, foe, and stranger alike—stands as life's supreme nobility."
+            },
+            {
+                kuralNumber: 112,
+                line1: "முறைமையார் பூம்பரப்பில் நெய்வித்தாய் ஓங்கல்",
+                line2: "குறையாது பின்னோர்க்குக் காப்பு.",
+                tamilPorul:
+                    "சூரியகாந்தியின் சமமான பூம்பரப்பில் உயிர்ச்சாறு சீராகப் பகிரப்படுவதால் நூற்றுக்கணக்கான நெய்வித்துகள் வளமாகத் திரண்டு ஓங்கி அடுத்த தலைமுறையைக் காப்பது போல, முறைமை வழுவாதவரின் வளம் எக்காலத்தும் குறையாது அவர்தம் பின்னோர்க்கும் நிலைத்த காப்பாகும்.",
+                meaning:
+                    "Because sap flows uniformly across every spiral ring of its level head, the sunflower matures hundreds of oil-rich, nutrient-dense seeds cleanly without waste to sustain future generations. Prosperity earned through steadfast fairness never decays—it endures as a lasting shield for one's descendants."
+            },
+            {
+                kuralNumber: 113,
+                line1: "சாய்தண்டில் மல்கும் மிகைவளம் தேன்சுரப்பின்",
+                line2: "ஆய்ந்து பொழுதே கழி.",
+                tamilPorul:
+                    "சமநிலை பிறழ்ந்து ஒருபுறம் சாய்ந்த தண்டில் மிகையாகத் திரளும் வளம் தேன்சுரந்து இனிப்பதாகத் தோன்றினாலும் விரைவில் தண்டை முறித்து அழித்துவிடுவது போல, நேர்மை நெறி பிறழ்ந்து வரும் வளம் நன்மை தருவதாகத் தோன்றினாலும் அதனை ஆய்ந்து அப்பொழுதே கழித்துவிடுக.",
+                meaning:
+                    "On a tall sunflower stem, any lopsided surge of uneven growth upsets center-of-gravity balance and threatens to snap the stalk under its own weight, compelling the plant's design to reject skewed excess. Even if wealth gained by departing from equity appears sweet and profitable, discern its danger and cast it away that very hour."
+            },
+            {
+                kuralNumber: 114,
+                line1: "இதழுதிர்ந்த வேளையில் செவ்வியோர் புல்லார்",
+                line2: "பதர்மணியால் தோன்றிடும் மெய்.",
+                tamilPorul:
+                    "சூரியகாந்தியின் ஒளிவீசும் மஞ்சள் இதழ்கள் உதிர்ந்துபோன வேளையில், அதன் வட்டத்தில் நிறைந்த வித்துமணிகள் உள்ளதா அல்லது வெற்றுப் பதர்களா என்பதே உண்மையைக் காட்டுவது போல, நேர்மையுடைய செவ்வியோரும் நேர்மையற்ற புல்லாரும் அவர் விட்டுச்செல்லும் எச்சத்தின் வழியே மெய்யாகத் தோன்றுவர்.",
+                meaning:
+                    "Once the bright outer ray petals drop away, the dried disc lays bare the unmistakable record of the plant's life—balanced nourishment yields rows of plump, fertile kernels, while skewed neglect leaves hollow chaff. Whether a person lived with impartiality or bias is revealed beyond doubt by the legacy they leave behind."
+            },
+            {
+                kuralNumber: 115,
+                line1: "ஏற்றமும் வீழ்வும் இயல்பே அலர்வட்டின்",
+                line2: "மாற்றமில் உள்ளமே பூண்.",
+                tamilPorul:
+                    "கதிரொளி மிகும் பொழுதும் புயற்காற்று வீசும் பொழுதும் மாறிவரினும் மலர்ந்த சூரியகாந்தியின் அலர்வட்டம் கிழக்கு நோக்கி மாறாமல் நிலைத்திருப்பது போல, வாழ்வில் ஏற்றமும் வீழ்வும் இயல்பானவை; அவ்விரு நிலைகளிலும் மாற்றமில்லாத உள்ளமே சான்றோர்க்கு மெய்யான பூணாகும்.",
+                meaning:
+                    "While rising sun, shifting clouds, and fierce field winds sweep endlessly overhead, the mature blooming sunflower locks its face calmly eastward without swaying off its inner axis. Gain and loss are natural tides of existence—remaining unswerving at heart through both is the truest ornament of noble character."
+            },
+            {
+                kuralNumber: 116,
+                line1: "அச்சு விலகி மனம்பிழைப்பின் மாய்வதனை",
+                line2: "உச்சிப்பூ சோர்வில் உணர்.",
+                tamilPorul:
+                    "தன் மைய அச்சிலிருந்து விலகித் தண்டு சிதையும் கணத்திலேயே சூரியகாந்தியின் உச்சிப்பூ உயிரோட்டம் அறுந்து சோர்ந்து மாய்வதைப் போல, நேர்மை என்னும் அச்சிலிருந்து விலகித் தன் மனம் பிழைசெய்யின் தான் அழிவது உறுதி என்பதை அப்போதே உணர்க.",
+                meaning:
+                    "The instant a sunflower's central vascular axis fractures or veers off alignment, sap delivery chokes inward and the radiant golden crown inevitably droops and perishes. Know with absolute certainty that ruin has already begun the moment the mind abandons the center of justice and commits wrong."
+            },
+            {
+                kuralNumber: 117,
+                line1: "பொன்வண்ணம் ஓய்ந்தும் பயன்சுமந்து கீழ்கவிழ்தல்",
+                line2: "மன்பதை தோல்வியெனல் இல்.",
+                tamilPorul:
+                    "முதிர்ந்த சூரியகாந்தியின் பொன்வண்ண இதழ்கள் ஓய்ந்து உதிர்ந்தாலும், உள்ளே நிறைந்த வித்துப் பயனைச் சுமந்தபடி அது கீழே கவிழ்ந்து தாழ்வதை உலகம் வீழ்ச்சியாகக் கருதாமல் அறுவடையின் வெற்றியாகப் போற்றுவது போல, நேர்மையிலும் நன்மையிலும் நிலைத்தவரின் எளிய தாழ்வை மன்பதை ஒருபோதும் தோல்வியெனக் கருதாது.",
+                meaning:
+                    "When autumn strips away its gleaming gold petals and the browned head bows low beneath the heavy weight of ripened seeds, neither farmers nor birds mistake that lowering for collapse—they revere it as the peak of harvest. The world never counts as ruin the humble material decline of one who stands steadfastly in equity and goodness."
+            },
+            {
+                kuralNumber: 118,
+                line1: "துலைநிகர் தட்டுப்பூ பக்கம் சரியா",
+                line2: "நிலைகொள்ளல் மேலோர் அழகு.",
+                tamilPorul:
+                    "எடைபார்த்துச் சமன் காட்டும் துலையாகிய தராசுக்கு நிகராக, அகன்ற தட்டுப்பூவை வலமோ இடமோ எந்தப் பக்கமும் சரியாமல் நேராக நிறுத்தித் தாங்கும் சூரியகாந்தியைப் போல, எவர் பக்கமும் சாயாமல் நேர்நிலை கொள்ளுதலே மேலோரின் மெய்யான அழகாகும்.",
+                meaning:
+                    "Balancing hundreds of symmetrical outer petals and heavy central seeds evenly atop an upright stalk without leaning left or right, the sunflower disc functions as nature's living weighing beam. Remaining completely uninclined toward any side—just like a true, leveled balance—is the crowning grace of the noble."
+            },
+            {
+                kuralNumber: 119,
+                line1: "வெளிமடல் வாய்மொழி கோணாமை செம்மை",
+                line2: "தெளிவாய் அகம்திருந்தும் கால்.",
+                tamilPorul:
+                    "உள்ளே உள்ள நூற்றுக்கணக்கான நுண்மலர்கள் நேர்த்தியாக அமைந்திருப்பதாலேயே சூரியகாந்தியின் வெளிமடல் சுழற்சியும் கோணாமல் பொலிவது போல, உள்ளகம் தெளிவோடு திருந்தி நேராக அமைந்திருக்கும் பொழுதே வாய்மொழி கோணாமல் பேசுவது மெய்யான செம்மையாகும்.",
+                meaning:
+                    "The sunflower's crisp, outward ring of golden petals owes its flawless radial symmetry entirely to the hidden, straight geometric matrix of fertile disc florets arranged beneath it. Speech free from distortion qualifies as true uprightness only when the inner heart itself is steadfastly clear and free from hidden crookedness."
+            },
+            {
+                kuralNumber: 120,
+                line1: "வண்டினம் ஊட்டியே சூல்கருவும் ஓம்புதல்",
+                line2: "பண்டமாற்று வாழ்ந்திடும் ஆறு.",
+                tamilPorul:
+                    "முட்களோ தடையோ இன்றி அகன்ற திறந்த மேடையில் வண்டினங்களுக்குத் தேனும் மகரந்தமும் தாராளமாக ஊட்டியே தன் சூல்கருவையும் வளமாக ஓம்பி நிறைவு காணும் சூரியகாந்தியைப் போல, பிறர் நலனையும் தம் நலன் போல் காத்துப் பகிர்வதே பண்டமாற்றுத் தொழில் செழித்து வாழ்ந்திடும் மெய்யான ஆறாகும்.",
+                meaning:
+                    "Spreading a broad, thornless, gatekeeper-free nectar platform that feeds honeybees, bumblebees, and wild pollinators generously while securing its own fertile cross-pollination, the sunflower thrives on mutual fairness. Commerce truly prospers only when one guards others' goods and interests with the exact same care devoted to one's own."
+            }
+        ]
+    },
+
+    // ======================================================================
+    // CHAPTER 13: அடக்கமுடைமை — பூவரசம்பூ (Kurals 121–130)
+    // ======================================================================
+    {
+        chapterNumber: 13,                      // Automatically loads images/13.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "அடக்கமுடைமை — பூவரசம்பூ",
+        chapterTitle: "The Possession of Self-Control – The Portia Tree Blossom",
+        flowerName: "The Portia Tree Blossom (பூவரசம்பூ)",
+        tamilSummary:
+            "அளவறிந்து மாலையில் கூம்பி விண்ணுலகம் காட்டி, உறுதியான பூங்காய்க்குள் விதைபோல் தன்வரம்பைப் பேணி, காலமறிந்து இளமஞ்சளிலிருந்து இளஞ்சிவப்பாய் நிறம்மாறித் திறந்தெளிந்து, கடற்காற்றில் சாயாது வெற்பினும் மேலாய் நிலைத்து, அரசன் எனப் பெயர்கொண்டும் தாழ்ந்திலங்கி வாழ்வின் வளமாகி, அந்திவர ஐந்திதழும் உள்குவித்து ஏழ்பிறப்புக்கும் நந்தாத காப்பளித்து, உள்புதைந்த தூண்போல் வாக்கோம்பலின் அருமையை உணர்த்தி, தூயவிதழில் ஓர்கறைபோல் வெம்மொழித்துளியை விலக்கி, கனல்வெந்த மடல் மாறினும் வஞ்சொல் தழும்பு தீராததைக் காட்டி, தன்னுள் செந்தணலை மறைத்துச் சினங்கடிந்து நன்னெறியையே நாடி வரச்செய்யும் பூவரசம்பூவின் வாழ்வியல் — உள்ளொடுக்கம், பணிவு, நாக்காவல் மற்றும் சினமடக்கமே வாழ்வின் அழியாத மாட்சி என்பதைக் குறள்கள் 121–130 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified structural and rhythmic designs of the Portia Tree Blossom, Chapter 13 proves that self-control is not weakness, but concentrated strength. Disciplined composure elevates life to celestial heights while arrogance plunges into darkness (121); guarding one's boundaries is the highest treasure a soul can hold (122); knowing when to pause and shift brings quiet eminence recognized by the wise (123); unswerving steadiness amid storms towers taller than a mountain (124); humility adds a second wealth to those already blessed with abundance (125); drawing the five senses inward secures an unfailing shield across generations (126); tucking speech safely within restraint prevents deep grief from careless slips (127); even one drop of harsh speech mars every accumulated goodness (128); heat-burns heal swiftly while scars carved by bitter words endure forever (129); and containing inner fire beneath calm wisdom draws virtue itself eagerly to one's threshold (130).",
+        architecturalArc: [
+            {
+                range: "121–123",
+                phase: "Rhythm & Boundary",
+                traits: "Dusk-folding diurnal clock • Sealed woody seed capsule • Yellow-to-purple pollinator closure signal"
+            },
+            {
+                range: "124–126",
+                phase: "Stature & Inwardness",
+                traits: "Salt-wind coastal composure • Humble thornless \"King of Flowers\" • Five cupped petals folding inward at dusk"
+            },
+            {
+                range: "127–129",
+                phase: "Guard of Speech",
+                traits: "Short recessed staminal column • Single dark blemish on pale yellow • Sun-scorched petal renewal vs. lasting scar"
+            },
+            {
+                range: "130",
+                phase: "Mastery of Fire",
+                traits: "Intense crimson core quietly contained within a cool pale-yellow bell"
+            }
+        ],
+        greenThinkingPrinciple:
+            "True power needs no noise or display—know your season, hold your fire quietly within a cool exterior, seal your vital core before night falls, and let disciplined restraint turn resilience into lasting grace.",
+        kurals: [
+            {
+                kuralNumber: 121,
+                line1: "கூம்புமலர் நெஞ்சொடுக்கம் விண்ணுலகம் சேர்த்திடும்",
+                line2: "வீம்புமனம் கங்குல் புகும்.",
+                tamilPorul:
+                    "மாலைப் பொழுதில் அளவறிந்து தன் இதழ்களைக் குவித்துக் கூம்பும் பூவரசமலர் போல நெஞ்சை ஒடுக்கி வாழும் பண்பு ஒருவரை விண்ணுலகத் தேவரிடையே சேர்த்திடும்; கட்டுப்பாடின்றித் திரியும் வீம்புமனம் மீளாப் பேரிருளாகிய கங்குலில் புகுந்து அழியும்.",
+                meaning:
+                    "Governed by a disciplined single-day clock, the Portia Blossom opens calmly at dawn and folds its petals neatly shut before nightfall so its vital core is never wasted in darkness. Composed self-restraint elevates a life to celestial stature, whereas willful, unbridled impulse plunges straight into pitch-black abyss."
+            },
+            {
+                kuralNumber: 122,
+                line1: "பூங்காயில் வித்தெனவே தன்வரம்பைப் பேணுக",
+                line2: "ஓங்குநிதி ஆவிக்கு இன்று.",
+                tamilPorul:
+                    "மலர்ந்து முடிந்த பின் உறுதியான பூவரசின் காய்க்குள் விதைகள் சிதறாமல் இறுகப் பொதிந்து காக்கப்படுவது போல, ஒருவன் தன் எல்லை வரம்பை அரிய செல்வமாகக் கருதிப் பேணுக; உயிர்க்கு அதனினும் ஓங்கி நிற்கும் நிதி உலகில் வேறொன்றும் இல்லை.",
+                meaning:
+                    "Once pollinated, the Portia flower drops its petals cleanly and seals its persistent calyx into a tough, tightly closed woody capsule that guards its seeds patiently rather than bursting impulsively. Guard self-restraint as your foremost treasury—no greater wealth exists for a living soul."
+            },
+            {
+                kuralNumber: 123,
+                line1: "நிறம்மாறும் பூவரசின் பாங்குணர்ந்து கற்றோர்",
+                line2: "திறந்தெளிந்து நிற்பின் உயர்வு.",
+                tamilPorul:
+                    "காலையில் இளமஞ்சளாக மலர்ந்து, தேன் வழங்கும் நேரம் முடிந்ததும் மாலையில் இளஞ்சிவப்பாக நிறம்மாறித் தெளிவாக உணர்த்தும் பூவரசின் பாங்குணர்ந்து ஒழுகுவது போல, அறிய வேண்டிய திறத்தைத் தெளிந்து அறவழியில் ஒடுங்கி நிற்பவர்க்கு உலகம் மதிக்கும் உயர்வு தானே வந்து சேரும்.",
+                meaning:
+                    "Shifting calmly from pale sulfur-yellow at morning to rose-purple by afternoon once its nectar window closes, the Portia Blossom communicates exact boundaries to pollinators without confusion or overextension. Knowing what wisdom requires and holding steady in disciplined restraint earns unmistakable eminence recognized by the wise."
+            },
+            {
+                kuralNumber: 124,
+                line1: "கடற்காற்றில் சாயாது பூக்கும் மலர்போல்",
+                line2: "தடம்மாறான் வெற்பினும் மேல்.",
+                tamilPorul:
+                    "கடற்கரையின் கடும் உப்புக்காற்றிலும் சுடும் வெயிலிலும் முறிந்து சாயாது தன் அமைப்பில் உறுதியாகப் பூத்து நிற்கும் பூவரசமலரைப் போல, தன் நெறித்தடத்திலிருந்து சிறிதும் மாறாது அமைதி காப்பவனின் தோற்றம் வானளாவிய வெற்பினும் மேலானதாகும்.",
+                meaning:
+                    "Rooted along Tamil Nadu's wind-lashed coastal belts and sun-baked roadsides, the Portia Blossom's sturdy leathery cup and woody stalk hold their composure through fierce salt gales without snapping or losing cadence. The stature of one who stands unswerving in their station with quiet self-mastery towers far above a mountain peak."
+            },
+            {
+                kuralNumber: 125,
+                line1: "அரசுமலர் தாழ்ந்திலங்கல் யார்க்கும் நலமே",
+                line2: "வரமுடையார் வாழ்வின் வளம்.",
+                tamilPorul:
+                    "பூக்களுக்கு அரசன் என்னும் பொருள்படப் 'பூவரசு' எனப் பெயர் தாங்கியும் முட்களின்றிக் கிளையில் தாழ்ந்து பணிவுடன் இலங்கும் மலரைப் போல, அடக்கமும் பணிவும் எல்லோர்க்கும் நலமே; அதிலும் செல்வ வரமுடையார்க்கு அது வாழ்வின் மேல் மேலும் சேரும் பெருவளமாகும்.",
+                meaning:
+                    "Named Poovarasu—\"King of Flowers\"—and endowed with year-round blooms, medicinal value, and dense shade, the flower still wears soft thornless petals and nods humbly downward rather than thrusting arrogantly skyward. Humility adorns every human being, and for those already blessed with abundance, it crowns their wealth with a second, richer grace."
+            },
+            {
+                kuralNumber: 126,
+                line1: "அந்திவர ஐந்திதழ்போல் ஐம்புலனும் உள்குவிக்கின்",
+                line2: "நந்தாத ஏழ்பிறப்பும் காப்பு.",
+                tamilPorul:
+                    "அந்திப் பொழுது வந்தவுடன் தன் ஐந்து இதழ்களையும் ஒன்றாக உள்ளே குவித்துத் தன் கருவைப் பாதுகாக்கும் பூவரசம்பூவைப் போல, ஒருவன் தன் ஐம்புலன்களையும் உள்ளே ஒடுக்கி ஆள வல்லானாயின், அது தலைமுறைகள் கடந்தும் குன்றாத நந்தாத காப்பாக விளங்கும்.",
+                meaning:
+                    "Overlapping in a sheltering spiral bell, the Portia Blossom's five crinkled petals curl inward together as dusk arrives, sealing the delicate reproductive core from nocturnal harm to secure unbroken generational seed continuity. Drawing the five senses inward under steady mastery in one lifetime builds an unfailing shield across seven generations."
+            },
+            {
+                kuralNumber: 127,
+                line1: "உள்புதைந்த தூண்போல் பிறவிடினும் வாக்கோம்பல்",
+                line2: "தள்ளின் பிழைமொழியால் நோய்.",
+                tamilPorul:
+                    "தன் இனத்துச் செம்பருத்தி போல மகரந்தத் தூணை வெளியே நீட்டாமல், இதழ்க் கிண்ணத்தின் உள்ளேயே அடக்கமாகப் புதைத்து வைத்திருக்கும் பூவரசம்பூவின் தூணைப் போல, மற்ற எவற்றைக் காக்கத் தவறினாலும் ஒருவன் தன் வாக்கை ஓம்ப வேண்டும்; அதனைத் தள்ளிவிட்டால் பிழைமொழியால் தீரா நோய் போன்ற துயரம் வந்து சேரும்.",
+                meaning:
+                    "Unlike its close botanical cousin the Hibiscus, whose staminal column thrusts far beyond its rim, the Portia Blossom keeps its short golden column strictly tucked inside the protective yellow bell. Whatever else one fails to guard, guard speech carefully—neglecting it invites deep, lasting anguish from a single slip of the tongue."
+            },
+            {
+                kuralNumber: 128,
+                line1: "தூயவிதழ் ஓர்கறை மாய்ப்பதுபோல் வெம்மொழி",
+                line2: "தீயதுளி நற்செயலும் பாழ்.",
+                tamilPorul:
+                    "மென்மையான தூய இளமஞ்சள் பூவரசிதழின் அழகு முழுவதையும் அதன்மேல் படும் ஒரேயொரு கருங்கறை மாய்த்துச் சிதைப்பது போல, பிறர்க்குத் துன்பம் தரும் வெம்மொழியின் ஒரு தீயதுளியே இதுவரை செய்த எல்லா நற்செயல்களையும் பாழாக்கிவிடும்.",
+                meaning:
+                    "Across the pristine, calm cream-yellow expanse of a Portia petal, even a single dark blemish or rough tear instantly mars the serenity of the entire floral bell. Even one solitary drop of harsh, wounding speech spoils the worth of every accumulated good deed."
+            },
+            {
+                kuralNumber: 129,
+                line1: "கனல்வெந்த பூமடல் மாறிடும் தீரா",
+                line2: "மனங்கீறும் வஞ்சொல் தழும்பு.",
+                tamilPorul:
+                    "சுடும் கதிரவனின் கனல்வெப்பத்தால் வாடி வெந்த பூவரசின் பூமடல் உதிர்ந்து கிளையில் புதிய மலராய் எளிதில் மாறி ஆறிடும்; ஆனால் பிறர் மனத்தைக் கீறிப் புண்படுத்திய கடுமையான வஞ்சொல்லின் தழும்பு எக்காலத்தும் தீராது நிலைத்திருக்கும்.",
+                meaning:
+                    "Even when blazing coastal heat scorches the outer crinkled rim of a Portia petal, the blossom sheds cleanly and the living twig heals swiftly into fresh bloom by the next dawn. A wound seared by fire heals from within, whereas the deep scar carved into a heart by cruel words never fades."
+            },
+            {
+                kuralNumber: 130,
+                line1: "தன்னுள் தணல்மறைக்கும் பூப்போல் சினங்கடிந்தோன்",
+                line2: "நன்னெறியும் நாடி வரும்.",
+                tamilPorul:
+                    "தன் இதழ்க் கிண்ணத்தின் அடிப்பாகத்தில் எரியும் செந்தணல் போன்ற ஆழ்ந்த செந்நிறக் கருவை வெளியே கக்காமல் குளிர்ந்த இளமஞ்சள் இதழ்க்குள் அடக்கி மறைக்கும் பூவரசம்பூவைப் போல, கற்றறிந்து சினத்தைக் கடிந்து ஒடுங்கும் சான்றோனை நன்னெறியாகிய அறமே தானே நாடித் தேடி வரும்.",
+                meaning:
+                    "Holding a fierce five-pointed crimson eye burning deep at its center while presenting an utterly cool, serene pale-yellow cup outward, the Portia Blossom contains inner fire without ever scorching its visitors, drawing pollinators peacefully into its heart. Righteous virtue itself eagerly seeks out the path of one who masters wisdom, subdues anger, and dwells in calm restraint."
+            }
+        ]
+    },
+
+    // ======================================================================
+    // CHAPTER 14: ஒழுக்கமுடைமை — அந்திமந்தாரை (Kurals 131–140)
+    // ======================================================================
+    {
+        chapterNumber: 14,                      // Automatically loads images/14.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "ஒழுக்கமுடைமை — அந்திமந்தாரை",
+        chapterTitle: "The Possession of Decorum (Right Conduct) – The Four O'Clock Flower",
+        flowerName: "The Four O'Clock Flower (அந்திமந்தாரை)",
+        tamilSummary:
+            "அந்திப் பொழுதில் தப்பாமல் மலர்ந்து பெருமை பயத்து, ஐந்து பச்சைப் புல்லிகளால் தன்னைப் புரந்து காத்து, மஞ்சளும் செவ்வூதாவும் கலங்காத தூய இதழ்மரபால் மேற்குலமாகி, மேலிலை உதிர்ந்தாலும் கிழங்கு வேரால் மீண்டும் தளிர்த்து, பகல் வெம்மையில் முரண்படாமல் கூம்பித் தீது தவிர்த்து, நன்னடையால் புகழ்பூண்டு, ஒவ்வொரு மலரும் கருமணி விதையாகித் தலைமுறைதோறும் நலம்பூத்து, நறுங்குழலில் எப்போதும் தேன்மணம் வீசி, மாலைக் குளிரோடும் விடியலோடும் ஞாலத்து ஒத்திசைந்து வாழும் அந்திமந்தாரையின் வாழ்வியல் — உயிரினும் மேலான சீலம், காலம் தவறா ஒழுங்கு மற்றும் உலகத்தோடு ஒத்திசையும் நன்னடையே வாழ்வின் மெய்யான அறிவும் பெருமையும் என்பதைக் குறள்கள் 131–140 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified circadian, structural, and genetic designs of the Four O'Clock Flower, Chapter 14 establishes good conduct not as rigid conformity, but as living alignment with natural order. Steadfast discipline yields eminence worth guarding even above life itself (131) and stands as one's surest support after weighing every virtue (132); clean inner integrity defines true nobility whereas straying degrades it (133); lost learning can always regrow like seasonal leaves, yet destroying one's root conduct ruins everything (134); just as envy strips away vitality, lack of conduct bars one from true stature (135); sensing midday harm keeps the steadfast from ever swerving off course (136); orderly conduct crowns life with renown while unruly straying leaves an unbearable stain (137); right conduct acts as the hardy black seed of all future welfare while crookedness breeds constant distress (138); deep refinement makes mean speech impossible even by accident (139); and all book-learning stands hollow if one fails to harmonize with the noble rhythm of the world (140).",
+        architecturalArc: [
+            {
+                range: "131–133",
+                phase: "Circadian Order & Lineage",
+                traits: "Exact 4 PM twilight clock • Five-pointed green involucre shield • Crisp unmuddied bicolor genetics"
+            },
+            {
+                range: "134–136",
+                phase: "Root Core & Vigilance",
+                traits: "Perennial tuberous root renewal • Non-competitive twilight grace • Daytime folding against scorching heat"
+            },
+            {
+                range: "137–139",
+                phase: "Renown, Seed & Purity",
+                traits: "\"Marvel\" honor vs. withered straying • Single ribbed black seed • Pure sweet nectar-tube fragrance"
+            },
+            {
+                range: "140",
+                phase: "World Synchrony",
+                traits: "Effortless evening-to-dawn alignment with planetary light and nocturnal pollinators"
+            }
+        ],
+        greenThinkingPrinciple:
+            "Decorum is nature's operating clock—keep your appointed season, guard your deep roots more closely than outward leaves, stay unmuddied in character, and align your daily rhythm harmoniously with the living world around you.",
+        kurals: [
+            {
+                kuralNumber: 131,
+                line1: "அந்திமலர் சீலம் பெருமை பயத்தலால்",
+                line2: "முந்தியே ஆவியினும் பேண்.",
+                tamilPorul:
+                    "மாலைப் பொழுதில் தப்பாமல் மலரும் அந்திமந்தாரை மலரின் சீரிய ஒழுங்கு அதற்கு உலகம் வியக்கும் பெருமையைப் பயப்பது போல, மாறாத நற்சீலமே வாழ்விற்கு உயர்ந்த பெருமையைத் தருதலால் அதனைத் தம் உயிராகிய ஆவியைக் காட்டிலும் முந்தியே போற்றிப் பேணுக.",
+                meaning:
+                    "Governed by an unerring circadian clock, the Four O'Clock Flower opens faithfully in the cool of late afternoon every single day—earning its botanical title as nature's \"Marvel\" purely through steadfast regularity. Because right conduct yields true eminence, cherish and guard it foremost, even above life itself."
+            },
+            {
+                kuralNumber: 132,
+                line1: "புல்லி புரக்கும் மலர்நெறி போற்றுக",
+                line2: "எல்லாம் அளந்தாலும் சார்பு.",
+                tamilPorul:
+                    "ஐந்து கூரிய பச்சைப் புல்லி மடல்கள் தம் உள்ளிருக்கும் மென்மையான மலர்க்குழலை அக்கறையோடு சுற்றிப் புரந்து காப்பது போல, நன்மலர் நெறியாகிய ஒழுக்கத்தை விழிப்புடன் போற்றுக; அறங்கள் எல்லாவற்றையும் நுட்பமாக அளந்து ஆராய்ந்தாலும் அது ஒன்றே நிலைத்த சார்பாகும்.",
+                meaning:
+                    "Cradled tightly inside a five-pointed green involucre cup that shields the delicate elongated floral tube from midday glare until dusk, the blossom thrives through attentive self-guarding. Guard right conduct with unceasing vigilance—even after weighing every path of virtue, conduct alone proves your unfailing support."
+            },
+            {
+                kuralNumber: 133,
+                line1: "தூய இதழ்மரபு போல்நடை மேற்குலம்",
+                line2: "சாயின் கடையாம் இனம்.",
+                tamilPorul:
+                    "மஞ்சளும் செவ்வூதாவும் கலங்கி மங்காமல் தெளிவான கோடாகத் தம் மரபு வண்ணத்தைத் தூய்மையாகக் காட்டும் அந்திமந்தாரை இதழ்களைப் போல, செம்மையான நன்னடையே மெய்யான மேற்குலமாகும்; அதிலிருந்து சாய்ந்து விலகின் அதுவே கடையான இனமாகிவிடும்.",
+                meaning:
+                    "Celebrated in botanical genetics for preserving crisp, unmuddied bicolor patterns—where lemon-yellow and vibrant magenta meet along clean hereditary lines without dissolving into disorder—the flower embodies purity of lineage. Steadfast right conduct itself constitutes noble birth; falling away from it reduces life to an ignoble state."
+            },
+            {
+                kuralNumber: 134,
+                line1: "இலைகள் தளிர்த்தல்போல் மீளும் பனுவல்",
+                line2: "நிலைநெறி வீழின் அறும்.",
+                tamilPorul:
+                    "வறட்சியில் மேலுள்ள இலைகளும் கிளைகளும் உதிர்ந்து மறைந்தாலும் மண்ணடியில் உள்ள உறுதிமிக்க கிழங்கு வேரால் அந்திமந்தாரை மீண்டும் தளிர்ப்பது போல, மறந்துபோன பனுவலாகிய நூற்கல்வியை மீண்டும் கற்று மீட்டுக்கொள்ளலாம்; ஆனால் வேர்போன்ற நிலைநெறி வீழ்ந்து சிதைந்தால் வாழ்வே அற்றுப்போகும்.",
+                meaning:
+                    "Even when seasonal drought or frost strips away its upper stems and foliage, the Four O'Clock regrows vigorously from its deep perennial tuberous root; yet if that buried foundation rots, the plant vanishes completely. Forgotten learning and scripture can always be re-acquired, but once foundational conduct collapses, true stature is severed beyond repair."
+            },
+            {
+                kuralNumber: 135,
+                line1: "பொறாமை வளமிலா வாடுமலர் அன்ன",
+                line2: "நெறியிலார் காணார் சிறப்பு.",
+                tamilPorul:
+                    "வெயிலோடு முரண்பட்டுப் பிறசெடிகளை நெருக்காமல் தன் அந்திப் பொழுதில் அமைதியாகப் பூக்கும் அந்திமந்தாரைக்கு மாறாக, பொறாமை என்னும் வெப்பத்தால் வளமிழந்து வாடும் மலரைப் போல, செந்நெறி இல்லாதவர் எக்காலத்திலும் உயர்ந்த சிறப்பைக் காண மாட்டார்.",
+                meaning:
+                    "Refusing to compete aggressively in harsh daytime glare or choke neighboring plants out of rivalry, the Four O'Clock reserves its vitality for serene dusk bloom, whereas stressed, competitive weeds shrivel without grace. Just as genuine prosperity never dwells in the envious, true eminence is never beheld by those devoid of right conduct."
+            },
+            {
+                kuralNumber: 136,
+                line1: "பகல்வெம்மை தீதுணர்ந்து கூம்புமலர் ஒப்ப",
+                line2: "தகவுடையோர் நீங்கார் வழி.",
+                tamilPorul:
+                    "உச்சிப் பகலின் கடும் வெம்மை தன் மென்னிதழ்களுக்குத் தீங்கு விளைவிக்கும் என்பதை உணர்ந்து, அவசரப்படாமல் அமைதியாகக் கூம்பி நிற்கும் அந்திமந்தாரையை ஒப்ப, நெறிதவறினால் விளையும் தீமையை உணர்ந்த தகவுடையோர் தம் நல்வழியிலிருந்து ஒருபோதும் நீங்க மாட்டார்.",
+                meaning:
+                    "Sensing the destructive cost of midday heat, the blossom holds its tender funnel tightly sealed through scorching hours rather than exposing its pollen prematurely to dehydration and ruin. Recognizing the deep harm that follows any lapse, those of steadfast worth never swerve from the path of decorum."
+            },
+            {
+                kuralNumber: 137,
+                line1: "நன்னடையால் மந்தாரை போல்புகழ் பூணுவர்",
+                line2: "புன்னடையால் தாங்காத மாசு.",
+                tamilPorul:
+                    "மாறாத கால ஒழுங்கால் அந்திமந்தாரை மாலை வானில் அனைவரும் போற்றும் புகழைப் பூணுவது போல, நன்னடையால் மக்கள் உலகம் மதிக்கும் பெருமையைப் பூணுவர்; ஒழுங்கு பிறழ்ந்த புன்னடையால் எவரும் தாங்க முடியாத பெரும் மாசை அடைவர்.",
+                meaning:
+                    "Honoring its twilight appointment day after day, the Four O'Clock commands enduring admiration across courtyards and draws swift hawkmoths to its fragrance, while disordered straying leaves only withered decay. Right conduct clothes a life in lasting renown, whereas base conduct brings an unbearable stain of disgrace."
+            },
+            {
+                kuralNumber: 138,
+                line1: "நலம்பூக்கும் கார்மணியாம் செந்நெறி கோணல்",
+                line2: "கலக்கமே நாளும் உறும்.",
+                tamilPorul:
+                    "ஒழுங்காக மலர்ந்த ஒவ்வொரு அந்திமந்தாரை மலரும் முதிர்ந்து ஒரு தூய கருமணி விதையாகித் தலைமுறைதோறும் நலம்பூப்பது போல, செந்நெறியே எல்லா நன்மைக்கும் அடிப்படை வித்தாகும்; அதிலிருந்து கோணிய தீநடை நாள்தோறும் நீங்கா மனக்கலக்கத்தையே உண்டாக்கும்.",
+                meaning:
+                    "Each orderly twilight flower matures cleanly into a single hard, ribbed jet-black seed that stores generational vitality and sparks fresh fragrant blooms season after season. Right conduct is the living seed from which every good flourishes, whereas crooked conduct invites unending distress day after day."
+            },
+            {
+                kuralNumber: 139,
+                line1: "நறுங்குழல் தேன்மணம்போல் சான்றோர் மறந்தும்",
+                line2: "சிறுமொழி கூறல் அரிது.",
+                tamilPorul:
+                    "மென்மையான நறுங்குழல் அமைப்புடைய அந்திமந்தாரை காற்றில் அசைந்தாலும் எப்போதும் இனிய தேன்மணத்தை மட்டுமே வீசுவது போல, நன்னடையில் நிலைத்த சான்றோர் தம்மை மறந்த பொழுதிலும் சிறுமையான தீய மொழிகளைக் கூறுதல் அரிதாகும்.",
+                meaning:
+                    "Shaped as a sleek, nectar-lined floral tube that releases exclusively sweet, soothing evening perfume—even when shaken by gusting night breezes—never turning foul or caustic, the flower stays pure in its expression. Those anchored in good conduct find it unthinkable to utter mean or evil words even by an accidental slip."
+            },
+            {
+                kuralNumber: 140,
+                line1: "ஞாலத்து ஒத்திசையும் மாலைப்பூ போல்நடவார்",
+                line2: "நூலெல்லாம் ஓதினும் வீண்.",
+                tamilPorul:
+                    "மாலைக் குளிரோடும் இரவுப் பூச்சிகளோடும் விடியல் ஒளியோடும் துல்லியமாக ஒத்திசைந்து வாழும் மாலைப்பூவான அந்திமந்தாரை போல, இவ்வுலகத்தின் உயர்ந்த நெறிகளோடு ஒத்திசைந்து நடக்க அறியாதவர் எத்தனை நூல்களை எல்லாம் கற்று ஓதினாலும் அது வீணேயாகும்.",
+                meaning:
+                    "Synchronized seamlessly with planetary light, cooling evening air, and nocturnal hawkmoths—opening when pollinators awaken and folding cleanly at sunrise—the Four O'Clock survives through total ecological harmony. Those who fail to live in harmony with the noble rhythm of the world render all their book-learning hollow and vain."
+            }
+        ]
+    }
+
+
+
 ];

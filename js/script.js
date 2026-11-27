@@ -70,7 +70,7 @@ window.ACTIVE_IMAGES_FOLDER = "images/";
 let activePillarId = "aram";   // Opens directly on Aram so the 3-tier Org Chart is immediately visible
 let activeIyalId = "all";      // "all" shows all chapters within the active Pillar
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     populateSectionOne();
     populateSectionTwo();
     setupNavigationModals();
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* --------------------------------------------------------------------------
    HELPERS: SAFE IMAGE LOADER & CLASSICAL CHAPTER-TO-IYAL ROUTER
    -------------------------------------------------------------------------- */
-function setSafeImage(imgEl, src, isLogo = false) {
+function setSafeImage(imgEl, src, isLogo) {
     if (!imgEl || !src) return;
     imgEl.classList.remove("missing-img");
 
@@ -98,9 +98,7 @@ function setSafeImage(imgEl, src, isLogo = false) {
     imgEl.src = src;
 }
 
-
-// Automatically merges Aram (Ch. 1–38), Porul (Ch. 39–108), and Inbam (Ch. 109–133)
-
+// Automatically merges Aram (Chapters 1–38), Porul (Chapters 39–108), and Inbam (Chapters 109–133)
 function getChaptersList() {
     const aram = typeof ARAM_CHAPTERS_DATA !== "undefined" && Array.isArray(ARAM_CHAPTERS_DATA)
         ? ARAM_CHAPTERS_DATA : [];
@@ -109,7 +107,7 @@ function getChaptersList() {
     const inbam = typeof INBAM_CHAPTERS_DATA !== "undefined" && Array.isArray(INBAM_CHAPTERS_DATA)
         ? INBAM_CHAPTERS_DATA : [];
 
-    return [...aram, ...porul, ...inbam];
+    return aram.concat(porul, inbam);
 }
 
 // Helper to display the exact target filename for any upcoming chapter
@@ -119,22 +117,22 @@ function getDataFileNameForChapter(chapterNum) {
     return "js/inbam-datas.js";
 }
 
-
 // Automatically determines exact Pillar + Sub-Pillar (Iyal) from chapterNumber (1–133)
 function findArchitectureForChapter(chapterNum) {
-    for (const pillar of KURAL_ARCHITECTURE) {
+    for (let i = 0; i < KURAL_ARCHITECTURE.length; i++) {
+        const pillar = KURAL_ARCHITECTURE[i];
         if (chapterNum >= pillar.start && chapterNum <= pillar.end) {
-            const iyal = pillar.iyals.find(
-                (sub) => chapterNum >= sub.start && chapterNum <= sub.end
-            );
-            return { pillar, iyal: iyal || null };
+            const iyal = pillar.iyals.find(function (sub) {
+                return chapterNum >= sub.start && chapterNum <= sub.end;
+            });
+            return { pillar: pillar, iyal: iyal || null };
         }
     }
     return { pillar: null, iyal: null };
 }
 
 function formatChapterRange(start, end) {
-    return start === end ? `Ch. ${start}` : `Ch. ${start}–${end}`;
+    return start === end ? "Chapter " + start : "Chapters " + start + "–" + end;
 }
 
 /* --------------------------------------------------------------------------
@@ -165,10 +163,10 @@ function populateSectionTwo() {
    2. ZERO-MANUAL IMAGE AUTO-SCANNER (Detects 1.jpg, 2.jpg, 3.jpg... Live!)
    -------------------------------------------------------------------------- */
 function checkImageExists(url) {
-    return new Promise((resolve) => {
+    return new Promise(function (resolve) {
         const probe = new Image();
-        probe.onload = () => resolve(true);
-        probe.onerror = () => resolve(false);
+        probe.onload = function () { resolve(true); };
+        probe.onerror = function () { resolve(false); };
         probe.src = url;
     });
 }
@@ -179,8 +177,9 @@ async function autoScanChapterImages() {
     const maxLimit = SITE_CONFIG.targetImages || 133;
 
     let detectedFolder = null;
-    for (const folder of foldersToTry) {
-        if (await checkImageExists(`${folder}1${ext}`)) {
+    for (let i = 0; i < foldersToTry.length; i++) {
+        const folder = foldersToTry[i];
+        if (await checkImageExists(folder + "1" + ext)) {
             detectedFolder = folder;
             break;
         }
@@ -196,7 +195,7 @@ async function autoScanChapterImages() {
     window.AUTO_DETECTED_IMAGES = [];
 
     for (let num = 1; num <= maxLimit; num++) {
-        const imagePath = `${detectedFolder}${num}${ext}`;
+        const imagePath = detectedFolder + num + ext;
         const exists = num === 1 ? true : await checkImageExists(imagePath);
         if (!exists) break;
 
@@ -222,17 +221,16 @@ function initializeCounters() {
 }
 
 function updateCounterDisplay(detectedImageCount) {
-    const formatNum = (num) => String(num).padStart(2, "0");
+    const formatNum = function (num) { return String(num).padStart(2, "0"); };
     document.getElementById("image-count-current").textContent = formatNum(detectedImageCount);
 
     let completedKurals = 0;
     if (SITE_CONFIG.autoMultiplyKuralsByImages) {
         completedKurals = detectedImageCount * 10;
     } else {
-        completedKurals = getChaptersList().reduce(
-            (total, chapter) => total + (Array.isArray(chapter.kurals) ? chapter.kurals.length : 0),
-            0
-        );
+        completedKurals = getChaptersList().reduce(function (total, chapter) {
+            return total + (Array.isArray(chapter.kurals) ? chapter.kurals.length : 0);
+        }, 0);
     }
 
     document.getElementById("kural-count-current").textContent = formatNum(completedKurals);
@@ -247,36 +245,36 @@ function getMergedChapterRecords() {
     const ext = SITE_CONFIG.chapterImageExtension || ".jpg";
 
     const chapterNumbers = new Set();
-    detectedImages.forEach((img) => chapterNumbers.add(img.chapterNumber));
-    chaptersData.forEach((ch) => chapterNumbers.add(ch.chapterNumber));
+    detectedImages.forEach(function (img) { chapterNumbers.add(img.chapterNumber); });
+    chaptersData.forEach(function (ch) { chapterNumbers.add(ch.chapterNumber); });
 
     return Array.from(chapterNumbers)
-        .sort((a, b) => a - b)
-        .map((num) => {
-            const textData = chaptersData.find((c) => c.chapterNumber === num) || null;
-            const imgData = detectedImages.find((i) => i.chapterNumber === num) || null;
+        .sort(function (a, b) { return a - b; })
+        .map(function (num) {
+            const textData = chaptersData.find(function (c) { return c.chapterNumber === num; }) || null;
+            const imgData = detectedImages.find(function (i) { return i.chapterNumber === num; }) || null;
             const arch = findArchitectureForChapter(num);
 
             return {
                 chapterNumber: num,
-                imagePath: imgData ? imgData.imagePath : `${window.ACTIVE_IMAGES_FOLDER}${num}${ext}`,
+                imagePath: imgData ? imgData.imagePath : (window.ACTIVE_IMAGES_FOLDER + num + ext),
                 pillarId: arch.pillar ? arch.pillar.id : "unassigned",
                 pillarTamil: arch.pillar ? arch.pillar.tamilName : "",
-                pillarEnglish: arch.pillar ? arch.pillar.englishName : (textData?.pillar || "Upcoming"),
+                pillarEnglish: arch.pillar ? arch.pillar.englishName : ((textData && textData.pillar) || "Upcoming"),
                 iyalId: arch.iyal ? arch.iyal.id : "unassigned",
                 iyalTamil: arch.iyal ? arch.iyal.tamil : "",
                 iyalTranslit: arch.iyal ? arch.iyal.translit : "",
                 iyalEnglish: arch.iyal ? arch.iyal.english : "",
-                chapterTitle: textData?.chapterTitle || `Bloom Chapter ${String(num).padStart(2, "0")}`,
-                tamilTitle: textData?.tamilTitle || "",
-                flowerName: textData?.flowerName || "",
+                chapterTitle: (textData && textData.chapterTitle) || ("Bloom Chapter " + String(num).padStart(2, "0")),
+                tamilTitle: (textData && textData.tamilTitle) || "",
+                flowerName: (textData && textData.flowerName) || "",
                 summary:
-                    textData?.summary ||
+                    (textData && textData.summary) ||
                     "Unedited bloom captured in the archive. Couplets and chapter summary will be published here shortly.",
-                     tamilSummary: textData?.tamilSummary || "",
-                     architecturalArc: Array.isArray(textData?.architecturalArc) ? textData.architecturalArc : [],
-                     greenThinkingPrinciple: textData?.greenThinkingPrinciple || "",
-		     kurals: Array.isArray(textData?.kurals) ? textData.kurals : []
+                tamilSummary: (textData && textData.tamilSummary) || "",
+                architecturalArc: (textData && Array.isArray(textData.architecturalArc)) ? textData.architecturalArc : [],
+                greenThinkingPrinciple: (textData && textData.greenThinkingPrinciple) || "",
+                kurals: (textData && Array.isArray(textData.kurals)) ? textData.kurals : []
             };
         });
 }
@@ -286,7 +284,7 @@ function setupOrgChartStaticButtons() {
     const wholePillarBtn = document.getElementById("org-show-whole-pillar-btn");
 
     if (rootBtn) {
-        rootBtn.addEventListener("click", () => {
+        rootBtn.addEventListener("click", function () {
             activePillarId = "all";
             activeIyalId = "all";
             renderOrgChartAndGrid();
@@ -294,7 +292,7 @@ function setupOrgChartStaticButtons() {
     }
 
     if (wholePillarBtn) {
-        wholePillarBtn.addEventListener("click", () => {
+        wholePillarBtn.addEventListener("click", function () {
             activeIyalId = "all";
             renderOrgChartAndGrid();
         });
@@ -303,36 +301,35 @@ function setupOrgChartStaticButtons() {
 
 function renderOrgChartAndGrid() {
     const allRecords = getMergedChapterRecords();
-    const formatNum = (n) => String(n).padStart(2, "0");
+    const formatNum = function (n) { return String(n).padStart(2, "0"); };
 
     // 1. Update Tier 1 Root Node
     const rootBtn = document.getElementById("org-root-btn");
     const rootProgress = document.getElementById("org-root-progress");
     if (rootBtn) rootBtn.classList.toggle("active", activePillarId === "all");
-    if (rootProgress) rootProgress.textContent = `${formatNum(allRecords.length)} / 133 Blooms Ready`;
+    if (rootProgress) rootProgress.textContent = formatNum(allRecords.length) + " / 133 Blooms Ready";
 
     // 2. Render Tier 2: 3 Main Pillar Nodes
     const pillarsGrid = document.getElementById("org-pillars-grid");
     if (pillarsGrid) {
         pillarsGrid.innerHTML = "";
 
-        KURAL_ARCHITECTURE.forEach((pillar) => {
-            const countInPillar = allRecords.filter((r) => r.pillarId === pillar.id).length;
+        KURAL_ARCHITECTURE.forEach(function (pillar) {
+            const countInPillar = allRecords.filter(function (r) { return r.pillarId === pillar.id; }).length;
             const btn = document.createElement("button");
             btn.type = "button";
-            btn.className = `org-pillar-node${activePillarId === pillar.id ? " active" : ""}`;
+            btn.className = "org-pillar-node" + (activePillarId === pillar.id ? " active" : "");
             btn.setAttribute("role", "tab");
             btn.setAttribute("aria-selected", String(activePillarId === pillar.id));
 
-            btn.innerHTML = `
-                <span class="org-pillar-num">Pillar 0${pillar.number} &bull; ${pillar.iyals.length} Iyals</span>
-                <span class="tamil-text org-pillar-tamil">${pillar.tamilName}</span>
-                <span class="org-pillar-eng">${pillar.englishName} — ${pillar.theme}</span>
-                <span class="org-pillar-stats">${formatChapterRange(pillar.start, pillar.end)} &bull; ${pillar.totalKurals} Kurals</span>
-                <span class="org-progress-pill">${formatNum(countInPillar)} / ${pillar.totalChapters} Blooms</span>
-            `;
+            btn.innerHTML =
+                '<span class="org-pillar-num">Pillar 0' + pillar.number + ' &bull; ' + pillar.iyals.length + ' Iyals</span>' +
+                '<span class="tamil-text org-pillar-tamil">' + pillar.tamilName + '</span>' +
+                '<span class="org-pillar-eng">' + pillar.englishName + ' — ' + pillar.theme + '</span>' +
+                '<span class="org-pillar-stats">' + formatChapterRange(pillar.start, pillar.end) + ' &bull; ' + pillar.totalKurals + ' Kurals</span>' +
+                '<span class="org-progress-pill">' + formatNum(countInPillar) + ' / ' + pillar.totalChapters + ' Blooms</span>';
 
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", function () {
                 activePillarId = pillar.id;
                 activeIyalId = "all";
                 renderOrgChartAndGrid();
@@ -348,7 +345,7 @@ function renderOrgChartAndGrid() {
     const wholePillarBtn = document.getElementById("org-show-whole-pillar-btn");
     const iyalsGrid = document.getElementById("org-iyals-grid");
 
-    const selectedPillar = KURAL_ARCHITECTURE.find((p) => p.id === activePillarId) || null;
+    const selectedPillar = KURAL_ARCHITECTURE.find(function (p) { return p.id === activePillarId; }) || null;
 
     if (iyalBranch && iyalsGrid) {
         if (!selectedPillar) {
@@ -357,38 +354,37 @@ function renderOrgChartAndGrid() {
             iyalBranch.hidden = false;
             if (iyalBranchLabel) {
                 iyalBranchLabel.textContent =
-                    `${selectedPillar.tamilName} (${selectedPillar.englishName}) — ${selectedPillar.iyals.length} Sub-Pillars (இயல்கள்)`;
+                    selectedPillar.tamilName + " (" + selectedPillar.englishName + ") — " + selectedPillar.iyals.length + " Sub-Pillars (இயல்கள்)";
             }
             if (wholePillarBtn) {
-                wholePillarBtn.textContent = `All ${selectedPillar.englishName} (${formatChapterRange(selectedPillar.start, selectedPillar.end)})`;
+                wholePillarBtn.textContent = "All " + selectedPillar.englishName + " (" + formatChapterRange(selectedPillar.start, selectedPillar.end) + ")";
                 wholePillarBtn.classList.toggle("active", activeIyalId === "all");
             }
 
             iyalsGrid.innerHTML = "";
-            selectedPillar.iyals.forEach((iyal) => {
-                const countInIyal = allRecords.filter((r) => r.iyalId === iyal.id).length;
+            selectedPillar.iyals.forEach(function (iyal) {
+                const countInIyal = allRecords.filter(function (r) { return r.iyalId === iyal.id; }).length;
                 const totalInIyal = iyal.end - iyal.start + 1;
                 const kuralsInIyal = totalInIyal * 10;
 
                 const node = document.createElement("button");
                 node.type = "button";
-                node.className = `org-iyal-node${activeIyalId === iyal.id ? " active" : ""}`;
+                node.className = "org-iyal-node" + (activeIyalId === iyal.id ? " active" : "");
                 node.setAttribute("role", "tab");
                 node.setAttribute("aria-selected", String(activeIyalId === iyal.id));
 
-                node.innerHTML = `
-                    <div class="org-iyal-top">
-                        <span class="org-iyal-index">Iyal ${String(iyal.num).padStart(2, "0")}</span>
-                        <span class="org-iyal-count-badge${countInIyal === 0 ? " zero" : ""}">
-                            ${countInIyal} / ${totalInIyal}
-                        </span>
-                    </div>
-                    <span class="tamil-text org-iyal-tamil">${iyal.tamil}</span>
-                    <span class="org-iyal-eng">${iyal.translit} — ${iyal.english}</span>
-                    <span class="org-iyal-range">${formatChapterRange(iyal.start, iyal.end)} &bull; ${kuralsInIyal} Kurals</span>
-                `;
+                node.innerHTML =
+                    '<div class="org-iyal-top">' +
+                        '<span class="org-iyal-index">Iyal ' + String(iyal.num).padStart(2, "0") + '</span>' +
+                        '<span class="org-iyal-count-badge' + (countInIyal === 0 ? ' zero' : '') + '">' +
+                            countInIyal + ' / ' + totalInIyal +
+                        '</span>' +
+                    '</div>' +
+                    '<span class="tamil-text org-iyal-tamil">' + iyal.tamil + '</span>' +
+                    '<span class="org-iyal-eng">' + iyal.translit + ' — ' + iyal.english + '</span>' +
+                    '<span class="org-iyal-range">' + formatChapterRange(iyal.start, iyal.end) + ' &bull; ' + kuralsInIyal + ' Kurals</span>';
 
-                node.addEventListener("click", () => {
+                node.addEventListener("click", function () {
                     activeIyalId = iyal.id;
                     renderOrgChartAndGrid();
                 });
@@ -403,11 +399,11 @@ function renderOrgChartAndGrid() {
     let selectedIyal = null;
 
     if (selectedPillar) {
-        filteredRecords = allRecords.filter((r) => r.pillarId === selectedPillar.id);
+        filteredRecords = allRecords.filter(function (r) { return r.pillarId === selectedPillar.id; });
         if (activeIyalId !== "all") {
-            selectedIyal = selectedPillar.iyals.find((sub) => sub.id === activeIyalId) || null;
+            selectedIyal = selectedPillar.iyals.find(function (sub) { return sub.id === activeIyalId; }) || null;
             if (selectedIyal) {
-                filteredRecords = filteredRecords.filter((r) => r.iyalId === selectedIyal.id);
+                filteredRecords = filteredRecords.filter(function (r) { return r.iyalId === selectedIyal.id; });
             }
         }
     }
@@ -428,110 +424,117 @@ function renderActiveBranchBar(selectedPillar, selectedIyal, shownCount) {
     let capacity = 133;
 
     if (selectedPillar && !selectedIyal) {
-        breadcrumb = `Pillar 0${selectedPillar.number} • ${formatChapterRange(selectedPillar.start, selectedPillar.end)}`;
-        heading = `${selectedPillar.tamilName} — ${selectedPillar.englishName} (${selectedPillar.theme})`;
+        breadcrumb = "Pillar 0" + selectedPillar.number + " • " + formatChapterRange(selectedPillar.start, selectedPillar.end);
+        heading = selectedPillar.tamilName + " — " + selectedPillar.englishName + " (" + selectedPillar.theme + ")";
         capacity = selectedPillar.totalChapters;
     } else if (selectedPillar && selectedIyal) {
         const range = formatChapterRange(selectedIyal.start, selectedIyal.end);
-        breadcrumb = `${selectedPillar.tamilName} › Iyal ${String(selectedIyal.num).padStart(2, "0")} • ${range}`;
-        heading = `${selectedIyal.tamil} (${selectedIyal.translit}) — ${selectedIyal.english}`;
+        breadcrumb = selectedPillar.tamilName + " › Iyal " + String(selectedIyal.num).padStart(2, "0") + " • " + range;
+        heading = selectedIyal.tamil + " (" + selectedIyal.translit + ") — " + selectedIyal.english;
         capacity = selectedIyal.end - selectedIyal.start + 1;
     }
 
-    bar.innerHTML = `
-        <div class="branch-bar-left">
-            <span class="branch-breadcrumb">${breadcrumb}</span>
-            <h3 class="branch-current-title tamil-text">${heading}</h3>
-        </div>
-        <div class="branch-bar-right">
-            Showing <strong>${String(shownCount).padStart(2, "0")}</strong> of ${capacity} Chapters
-        </div>
-    `;
+    bar.innerHTML =
+        '<div class="branch-bar-left">' +
+            '<span class="branch-breadcrumb">' + breadcrumb + '</span>' +
+            '<h3 class="branch-current-title tamil-text">' + heading + '</h3>' +
+        '</div>' +
+        '<div class="branch-bar-right">' +
+            'Showing <strong>' + String(shownCount).padStart(2, "0") + '</strong> of ' + capacity + ' Chapters' +
+        '</div>';
 }
 
 /* --------------------------------------------------------------------------
    HELPER: BUILD REUSABLE PILLAR / IYAL / ADHIGARAM / KURAL HTML BLOCKS
-   Matches the exact framed blueprint across both Grid Cards & Chapter Reader
+   Full Bilingual Clarity (Tamil + English) across Grid Cards & Chapter Reader
    -------------------------------------------------------------------------- */
 function buildArchHeaderHTML(chapterNum) {
-    const { pillar, iyal } = findArchitectureForChapter(chapterNum);
+    const arch = findArchitectureForChapter(chapterNum);
+    const pillar = arch.pillar;
+    const iyal = arch.iyal;
     const pillarNum = pillar ? String(pillar.number).padStart(2, "0") : "00";
     const paalTamil = pillar ? pillar.tamilName : "அறத்துப்பால்";
+    const paalEnglish = pillar ? (pillar.englishName + " — " + pillar.theme) : "";
     const iyalNum = iyal ? String(iyal.num).padStart(2, "0") : "00";
     const iyalTamil = iyal ? iyal.tamil : "";
     const iyalTranslit = iyal ? iyal.translit : "";
+    const iyalEnglish = iyal ? iyal.english : "";
 
-    return `
-        <div class="frame-pillar-row">
-            <span class="frame-pillar-badge">Pillar: ${pillarNum}</span>
-            <span class="frame-paal-badge tamil-text">பால்: ${paalTamil}</span>
-        </div>
-        ${iyal ? `
-        <div class="frame-iyal-box">
-            <span class="frame-iyal-line tamil-text">Iyal: ${iyalNum} &bull; ${iyalTamil}</span>
-            <span class="frame-iyal-translit">(${iyalTranslit})</span>
-        </div>` : ""}
-    `;
+    let html =
+        '<div class="frame-pillar-row">' +
+            '<span class="frame-pillar-badge">Pillar: ' + pillarNum + '</span>' +
+            '<span class="frame-paal-badge tamil-text">' +
+                'பால்: ' + paalTamil +
+                (paalEnglish ? ' <span class="frame-paal-eng">&bull; ' + paalEnglish + '</span>' : '') +
+            '</span>' +
+        '</div>';
+
+    if (iyal) {
+        html +=
+            '<div class="frame-iyal-box">' +
+                '<span class="frame-iyal-line tamil-text">Sub-Pillar (Iyal) ' + iyalNum + ' &bull; ' + iyalTamil + '</span>' +
+                '<span class="frame-iyal-translit">' + iyalTranslit + ' &mdash; ' + iyalEnglish + '</span>' +
+            '</div>';
+    }
+
+    return html;
 }
 
 function buildAdhigaramHTML(record) {
     const chNum = record.chapterNumber;
-    // Prevents duplicating "அத்தியாயம் 1" or "அதிகாரம் 1" if already present in tamilTitle
     const cleanTamil = record.tamilTitle
         ? record.tamilTitle.replace(/^(அத்தியாயம்|அதிகாரம்)\s*:?\s*\d+\s*[-–—:]?\s*/i, "").trim()
         : "";
     const adhigaramTamil = cleanTamil
-        ? `அதிகாரம் : ${chNum} - ${cleanTamil}`
-        : `அதிகாரம் : ${chNum} - ${record.chapterTitle}`;
+        ? ("அதிகாரம் : " + chNum + " - " + cleanTamil)
+        : ("Chapter " + chNum + " — " + record.chapterTitle);
 
-    return `
-        <div class="frame-adhigaram-badge">
-            <span class="frame-adhigaram-ta tamil-text">${adhigaramTamil}</span>
-            ${cleanTamil && record.chapterTitle ? `<span class="frame-adhigaram-eng">${record.chapterTitle}</span>` : ""}
-        </div>
-    `;
+    return (
+        '<div class="frame-adhigaram-badge">' +
+            '<span class="frame-adhigaram-ta tamil-text">' + adhigaramTamil + '</span>' +
+            (cleanTamil && record.chapterTitle
+                ? '<span class="frame-adhigaram-eng">Chapter ' + chNum + ' : ' + record.chapterTitle + '</span>'
+                : '') +
+        '</div>'
+    );
 }
 
+function buildKuralUnitHTML(kural, globalKuralNum) {
+    const porulText = kural.tamilPorul || "";
+    const meaningText = kural.meaning || "";
 
-function buildKuralUnitHTML(kural, globalKuralNum, compact = false) {
-    const rawPorul = kural.tamilPorul || "";
-    const porulText =
-        compact && rawPorul.length > 130
-            ? rawPorul.slice(0, 130).trim() + "..."
-            : rawPorul;
+    let html =
+        '<div class="frame-kural-unit">' +
+            '<div class="frame-kural-top">' +
+                '<div class="frame-kural-num-box">' +
+                    '<span class="frame-kural-num-ta tamil-text">குறள் : ' + globalKuralNum + '</span>' +
+                    '<span class="frame-kural-num-en">Kural : ' + globalKuralNum + '</span>' +
+                '</div>' +
+                '<div class="frame-kural-verse-wrap">' +
+                    '<span class="frame-kural-seal">' + globalKuralNum + '</span>' +
+                    '<p class="tamil-text frame-kural-verse">' + kural.line1 + '<br>' + kural.line2 + '</p>' +
+                '</div>' +
+            '</div>';
 
-    const rawMeaning = kural.meaning || "";
-    const meaningText =
-        compact && rawMeaning.length > 130
-            ? rawMeaning.slice(0, 130).trim() + "..."
-            : rawMeaning;
+    if (porulText) {
+        html +=
+            '<div class="frame-porul-box">' +
+                '<span class="frame-porul-label tamil-text">தமிழ்ப் பொருள் :</span>' +
+                '<p class="frame-porul-text tamil-text">' + porulText + '</p>' +
+            '</div>';
+    }
 
-    return `
-        <div class="frame-kural-unit">
-            <div class="frame-kural-top">
-                <div class="frame-kural-num-box">
-                    <span class="frame-kural-num-ta tamil-text">குறள் : ${globalKuralNum}</span>
-                    <span class="frame-kural-num-en">Kural : ${globalKuralNum}</span>
-                </div>
-                <div class="frame-kural-verse-wrap">
-                    <span class="frame-kural-seal">${globalKuralNum}</span>
-                    <p class="tamil-text frame-kural-verse">${kural.line1}<br>${kural.line2}</p>
-                </div>
-            </div>
-            ${porulText ? `
-            <div class="frame-porul-box">
-                <span class="frame-porul-label tamil-text">தமிழ்ப் பொருள் :</span>
-                <p class="frame-porul-text tamil-text">${porulText}</p>
-            </div>` : ""}
-            ${meaningText ? `
-            <div class="frame-meaning-box">
-                <span class="frame-meaning-label">Meaning:</span>
-                <p class="frame-meaning-text">${meaningText}</p>
-            </div>` : ""}
-        </div>
-    `;
+    if (meaningText) {
+        html +=
+            '<div class="frame-meaning-box">' +
+                '<span class="frame-meaning-label">English Meaning:</span>' +
+                '<p class="frame-meaning-text">' + meaningText + '</p>' +
+            '</div>';
+    }
+
+    html += '</div>';
+    return html;
 }
-
 
 function renderChaptersGrid(records, selectedPillar, selectedIyal) {
     const grid = document.getElementById("chapters-grid");
@@ -541,31 +544,33 @@ function renderChaptersGrid(records, selectedPillar, selectedIyal) {
 
     if (records.length === 0) {
         let emptyMessage =
-            "Drop numbered flower photos (<code>1.jpg</code>–<code>133.jpg</code>) into <code>images/</code> and add their chapters to <code>js/kurals-datas.js</code> to illuminate this branch automatically.";
+            "Drop numbered flower photos (<code>1.jpg</code>–<code>133.jpg</code>) into <code>images/</code> and add their chapters to the corresponding Pillar data file to illuminate this branch automatically.";
 
         if (selectedIyal) {
             const range = formatChapterRange(selectedIyal.start, selectedIyal.end);
             const totalKurals = (selectedIyal.end - selectedIyal.start + 1) * 10;
-            emptyMessage = `
-                <strong style="color: var(--gold-bright); display: block; margin-bottom: 8px;">
-                    ${selectedIyal.tamil} (${selectedIyal.translit}) &bull; ${range} (${totalKurals} Kurals)
-                </strong>
-                This sub-pillar sanctuary is reserved and ready. Once you place <code>${selectedIyal.start}.jpg</code>${selectedIyal.end > selectedIyal.start ? ` through <code>${selectedIyal.end}.jpg</code>` : ""} in your <code>images/</code> folder, they will appear right here automatically.
-            `;
+            const rangeHint = selectedIyal.end > selectedIyal.start
+                ? (" through <code>" + selectedIyal.end + ".jpg</code>")
+                : "";
+            emptyMessage =
+                '<strong style="color: var(--gold-bright); display: block; margin-bottom: 8px;">' +
+                    selectedIyal.tamil + ' (' + selectedIyal.translit + ') &bull; ' + range + ' (' + totalKurals + ' Kurals)' +
+                '</strong>' +
+                'This sub-pillar sanctuary is reserved and ready. Once you place <code>' + selectedIyal.start + '.jpg</code>' +
+                rangeHint + ' in your <code>images/</code> folder, they will appear right here automatically.';
         } else if (selectedPillar) {
-            emptyMessage = `
-                <strong style="color: var(--gold-bright); display: block; margin-bottom: 8px;">
-                    ${selectedPillar.tamilName} (${selectedPillar.englishName}) &bull; ${formatChapterRange(selectedPillar.start, selectedPillar.end)}
-                </strong>
-                No blooms uploaded in this pillar yet. Photos numbered <code>${selectedPillar.start}.jpg</code> to <code>${selectedPillar.end}.jpg</code> will automatically populate here.
-            `;
+            emptyMessage =
+                '<strong style="color: var(--gold-bright); display: block; margin-bottom: 8px;">' +
+                    selectedPillar.tamilName + ' (' + selectedPillar.englishName + ') &bull; ' + formatChapterRange(selectedPillar.start, selectedPillar.end) +
+                '</strong>' +
+                'No blooms uploaded in this pillar yet. Photos numbered <code>' + selectedPillar.start + '.jpg</code> to <code>' + selectedPillar.end + '.jpg</code> will automatically populate here.';
         }
 
-        grid.innerHTML = `<div class="empty-databank-msg">${emptyMessage}</div>`;
+        grid.innerHTML = '<div class="empty-databank-msg">' + emptyMessage + '</div>';
         return;
     }
 
-    records.forEach((rec) => {
+    records.forEach(function (rec) {
         const card = document.createElement("article");
         card.className = "chapter-card";
 
@@ -573,44 +578,40 @@ function renderChaptersGrid(records, selectedPillar, selectedIyal) {
         const firstKuralNum = firstKural
             ? (firstKural.kuralNumber || (rec.chapterNumber - 1) * 10 + 1)
             : (rec.chapterNumber - 1) * 10 + 1;
+        const targetFile = getDataFileNameForChapter(rec.chapterNumber);
 
         const previewContentHTML = firstKural
-            ? buildKuralUnitHTML(firstKural, firstKuralNum, true)
-            : `
-                <div class="frame-meaning-box">
-                    <span class="frame-meaning-label">Status:</span>
-                    <p class="frame-meaning-text">
-                        Unedited bloom archived. Couplets ${firstKuralNum}–${firstKuralNum + 9} and meanings will appear here automatically once added to <code>js/kurals-datas.js</code>.
-                    </p>
-                </div>
-            `;
+            ? buildKuralUnitHTML(firstKural, firstKuralNum)
+            : (
+                '<div class="frame-meaning-box">' +
+                    '<span class="frame-meaning-label">Status:</span>' +
+                    '<p class="frame-meaning-text">' +
+                        'Unedited bloom archived. Couplets ' + firstKuralNum + '–' + (firstKuralNum + 9) +
+                        ' and meanings will appear here automatically once added to <code>' + targetFile + '</code>.' +
+                    '</p>' +
+                '</div>'
+            );
 
-        card.innerHTML = `
-            <!-- Top Pillar & Iyal Header matching blueprint -->
-            <div class="card-arch-header">
-                ${buildArchHeaderHTML(rec.chapterNumber)}
-            </div>
+        const btnText = rec.kurals.length > 0
+            ? ("Open Full Chapter (" + rec.kurals.length + " / 10 Couplets)")
+            : "View Bloom Frame";
 
-            <!-- Uncropped Bloom Photograph -->
-            <div class="chapter-card-img-box">
-                <img src="${rec.imagePath}" alt="${rec.chapterTitle}" loading="lazy">
-            </div>
+        card.innerHTML =
+            '<div class="card-arch-header">' +
+                buildArchHeaderHTML(rec.chapterNumber) +
+            '</div>' +
+            '<div class="chapter-card-img-box">' +
+                '<img src="' + rec.imagePath + '" alt="' + rec.chapterTitle + '" loading="lazy">' +
+            '</div>' +
+            '<div class="chapter-card-body">' +
+                '<div class="frame-kural-enclosure">' +
+                    buildAdhigaramHTML(rec) +
+                    previewContentHTML +
+                '</div>' +
+                '<button class="chapter-open-btn" type="button">' + btnText + '</button>' +
+            '</div>';
 
-            <!-- Enclosed Adhigaram + Featured Couplet Preview + Action Button -->
-            <div class="chapter-card-body">
-                <div class="frame-kural-enclosure">
-                    ${buildAdhigaramHTML(rec)}
-                    ${previewContentHTML}
-                </div>
-                <button class="chapter-open-btn" type="button">
-                    ${rec.kurals.length > 0
-                        ? `Open Full Chapter (${rec.kurals.length} / 10 Couplets)`
-                        : "View Bloom Frame"}
-                </button>
-            </div>
-        `;
-
-        card.querySelector(".chapter-open-btn").addEventListener("click", () => {
+        card.querySelector(".chapter-open-btn").addEventListener("click", function () {
             openChapterReader(rec);
         });
 
@@ -631,7 +632,7 @@ function openChapterReader(record) {
 
     // Keep accessible modal title populated, hide duplicate visual title lines above image
     const titleEl = document.getElementById("ch-modal-title");
-    titleEl.textContent = `Chapter ${paddedNum} — ${record.chapterTitle}`;
+    titleEl.textContent = "Chapter " + paddedNum + " — " + record.chapterTitle;
     titleEl.className = "ch-sr-only";
 
     const tamilTitleEl = document.getElementById("ch-modal-tamil-title");
@@ -641,7 +642,7 @@ function openChapterReader(record) {
     // 2. Full Uncropped Bloom Image
     document.getElementById("ch-modal-img").src = record.imagePath;
 
-  // 3. Chapter Summary Snapshot (தமிழ் சுருக்கம் + Message + 2x2 Arc + Green Thinking)
+    // 3. Chapter Summary Snapshot (தமிழ் சுருக்கம் + Message + 2x2 Arc + Green Thinking)
     const summaryBox = modal.querySelector(".ch-summary-box");
     if (summaryBox) {
         const startK = (record.chapterNumber - 1) * 10 + 1;
@@ -650,57 +651,66 @@ function openChapterReader(record) {
             record.tamilSummary || record.architecturalArc.length > 0 || record.greenThinkingPrinciple;
 
         if (!hasRichSummary) {
-            // Simple fallback if a chapter only has a basic summary paragraph
-            summaryBox.innerHTML = `
-                <h3 class="ch-sub-heading">Chapter Summary</h3>
-                <p id="ch-modal-summary" class="ch-summary-text">${record.summary}</p>
-            `;
+            summaryBox.innerHTML =
+                '<h3 class="ch-sub-heading">Chapter Summary</h3>' +
+                '<p id="ch-modal-summary" class="ch-summary-text">' + record.summary + '</p>';
         } else {
-            const arcHTML = record.architecturalArc.length > 0 ? `
-                <div class="ch-arc-section">
-                    <span class="ch-block-label">Architectural Arc (Kurals ${startK}–${endK} at a Glance)</span>
-                    <div class="ch-arc-grid">
-                        ${record.architecturalArc.map((step) => `
-                            <div class="ch-arc-card">
-                                <div class="ch-arc-top">
-                                    <span class="ch-arc-range">${step.range}</span>
-                                    <span class="ch-arc-phase">${step.phase}</span>
-                                </div>
-                                <p class="ch-arc-traits">${step.traits}</p>
-                            </div>
-                        `).join("")}
-                    </div>
-                </div>
-            ` : "";
+            let arcHTML = "";
+            if (record.architecturalArc.length > 0) {
+                const arcCards = record.architecturalArc.map(function (step) {
+                    return (
+                        '<div class="ch-arc-card">' +
+                            '<div class="ch-arc-top">' +
+                                '<span class="ch-arc-range">' + step.range + '</span>' +
+                                '<span class="ch-arc-phase">' + step.phase + '</span>' +
+                            '</div>' +
+                            '<p class="ch-arc-traits">' + step.traits + '</p>' +
+                        '</div>'
+                    );
+                }).join("");
 
-            summaryBox.innerHTML = `
-                <div class="ch-snapshot-stack">
-                    <div class="ch-snapshot-header">
-                        <span class="tamil-text ch-snapshot-tamil-head">அதிகாரப் பிழிவு</span>
-                        <span class="ch-snapshot-eng-sub">Chapter ${record.chapterNumber} Summary Snapshot &bull; Kurals ${startK}–${endK}</span>
-                    </div>
+                arcHTML =
+                    '<div class="ch-arc-section">' +
+                        '<span class="ch-block-label">Architectural Arc (Kurals ' + startK + '–' + endK + ' at a Glance)</span>' +
+                        '<div class="ch-arc-grid">' + arcCards + '</div>' +
+                    '</div>';
+            }
 
-                    ${record.tamilSummary ? `
-                    <div class="ch-essence-box">
-                        <span class="ch-block-label ch-block-label-ta">தமிழ் சுருக்கம் (Tamil Essence)</span>
-                        <p class="tamil-text ch-essence-text">${record.tamilSummary}</p>
-                    </div>` : ""}
+            let snapshotHTML =
+                '<div class="ch-snapshot-stack">' +
+                    '<div class="ch-snapshot-header">' +
+                        '<span class="tamil-text ch-snapshot-tamil-head">அதிகாரப் பிழிவு</span>' +
+                        '<span class="ch-snapshot-eng-sub">Chapter ' + record.chapterNumber + ' Summary Snapshot &bull; Kurals ' + startK + '–' + endK + '</span>' +
+                    '</div>';
 
-                    ${record.summary ? `
-                    <div class="ch-message-box">
-                        <span class="ch-block-label">Chapter Message (Humanity's Takeaway)</span>
-                        <p class="ch-message-text">${record.summary}</p>
-                    </div>` : ""}
+            if (record.tamilSummary) {
+                snapshotHTML +=
+                    '<div class="ch-essence-box">' +
+                        '<span class="ch-block-label ch-block-label-ta">தமிழ் சுருக்கம் (Tamil Essence)</span>' +
+                        '<p class="tamil-text ch-essence-text">' + record.tamilSummary + '</p>' +
+                    '</div>';
+            }
 
-                    ${arcHTML}
+            if (record.summary) {
+                snapshotHTML +=
+                    '<div class="ch-message-box">' +
+                        '<span class="ch-block-label">Chapter Message (Humanity\'s Takeaway)</span>' +
+                        '<p class="ch-message-text">' + record.summary + '</p>' +
+                    '</div>';
+            }
 
-                    ${record.greenThinkingPrinciple ? `
-                    <div class="ch-green-principle">
-                        <span class="ch-green-label">Green Thinking Principle</span>
-                        <p class="ch-green-text">“${record.greenThinkingPrinciple}”</p>
-                    </div>` : ""}
-                </div>
-            `;
+            snapshotHTML += arcHTML;
+
+            if (record.greenThinkingPrinciple) {
+                snapshotHTML +=
+                    '<div class="ch-green-principle">' +
+                        '<span class="ch-green-label">Green Thinking Principle</span>' +
+                        '<p class="ch-green-text">“' + record.greenThinkingPrinciple + '”</p>' +
+                    '</div>';
+            }
+
+            snapshotHTML += '</div>';
+            summaryBox.innerHTML = snapshotHTML;
         }
     }
 
@@ -715,18 +725,18 @@ function openChapterReader(record) {
 
     if (record.kurals.length === 0) {
         const startK = (record.chapterNumber - 1) * 10 + 1;
-        kuralsMarkup += `
-            <div class="frame-meaning-box">
-                <span class="frame-meaning-label">Upcoming Couplets (${startK}–${startK + 9}):</span>
-                <p class="frame-meaning-text">
-                    The 10 couplets and English meanings for Chapter ${paddedNum} are currently being composed in <code>js/kurals-datas.js</code>.
-                </p>
-            </div>
-        `;
+        const targetFile = getDataFileNameForChapter(record.chapterNumber);
+        kuralsMarkup +=
+            '<div class="frame-meaning-box">' +
+                '<span class="frame-meaning-label">Upcoming Couplets (' + startK + '–' + (startK + 9) + '):</span>' +
+                '<p class="frame-meaning-text">' +
+                    'The 10 couplets and English meanings for Chapter ' + paddedNum + ' are currently being composed in <code>' + targetFile + '</code>.' +
+                '</p>' +
+            '</div>';
     } else {
-        record.kurals.forEach((kural, index) => {
+        record.kurals.forEach(function (kural, index) {
             const kNum = kural.kuralNumber || (record.chapterNumber - 1) * 10 + (index + 1);
-            kuralsMarkup += buildKuralUnitHTML(kural, kNum, false);
+            kuralsMarkup += buildKuralUnitHTML(kural, kNum);
         });
     }
 
@@ -740,22 +750,21 @@ function openChapterReader(record) {
     document.body.style.overflow = "hidden";
 }
 
-
 function setupChapterReaderModal() {
     const modal = document.getElementById("chapter-modal");
     const closeBtn = document.getElementById("ch-modal-close-btn");
 
-    const closeChapterModal = () => {
+    const closeChapterModal = function () {
         modal.hidden = true;
         document.body.style.overflow = "";
     };
 
     closeBtn.addEventListener("click", closeChapterModal);
-    modal.addEventListener("click", (event) => {
+    modal.addEventListener("click", function (event) {
         if (event.target === modal) closeChapterModal();
     });
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", function (event) {
         if (event.key === "Escape" && !modal.hidden) closeChapterModal();
     });
 }
@@ -771,8 +780,8 @@ function setupNavigationModals() {
     const modalBody = document.getElementById("modal-body");
     const navButtons = document.querySelectorAll(".nav-btn[data-modal]");
 
-    navButtons.forEach((button) => {
-        button.addEventListener("click", () => {
+    navButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
             const key = button.getAttribute("data-modal");
             const data = NAV_MODALS[key];
             if (!data) return;
@@ -784,7 +793,7 @@ function setupNavigationModals() {
             if (data.richContent) {
                 modalBody.innerHTML = data.richContent;
             } else if (Array.isArray(data.paragraphs)) {
-                data.paragraphs.forEach((text) => {
+                data.paragraphs.forEach(function (text) {
                     const p = document.createElement("p");
                     p.textContent = text;
                     modalBody.appendChild(p);
@@ -799,17 +808,17 @@ function setupNavigationModals() {
         });
     });
 
-    const closeModal = () => {
+    const closeModal = function () {
         modal.hidden = true;
         document.body.style.overflow = "";
     };
 
     closeBtn.addEventListener("click", closeModal);
-    modal.addEventListener("click", (event) => {
+    modal.addEventListener("click", function (event) {
         if (event.target === modal) closeModal();
     });
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", function (event) {
         if (event.key === "Escape" && !modal.hidden) closeModal();
     });
 }
