@@ -1827,7 +1827,272 @@ const ARAM_CHAPTERS_DATA = [
                     "Synchronized seamlessly with planetary light, cooling evening air, and nocturnal hawkmoths—opening when pollinators awaken and folding cleanly at sunrise—the Four O'Clock survives through total ecological harmony. Those who fail to live in harmony with the noble rhythm of the world render all their book-learning hollow and vain."
             }
         ]
+    },
+
+    // ======================================================================
+    // CHAPTER 15: பிறனில்விழையாமை — கானாவாழைப்பூ (Kurals 141–150)
+    // ======================================================================
+    {
+        chapterNumber: 15,                      // Automatically loads images/15.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "பிறனில்விழையாமை — கானாவாழைப்பூ",
+        chapterTitle: "Sanctity of Boundaries (Not Coveting Another's Spouse) – The Benghal Dayflower",
+        flowerName: "The Benghal Dayflower (கானாவாழைப்பூ)",
+        tamilSummary:
+            "தன் பச்சைப் புல்லி மடலுக்குள்ளேயே ஒழுங்காக வாழ்ந்து, பிற மரங்களில் ஒட்டி உறிஞ்சாத படர்கொடியாய்ப் பாங்கு காட்டி, முரட்டுத் தீண்டலில் நீராகக் கரைந்து சிதைவதால் துரோகத்தின் உயிரற்ற தன்மையை உணர்த்தி, புல்லியிலிருந்து உயர்ந்தும் வரம்புகடவாமல் நின்று, காலையில் தோன்றி மறையும் சிற்றிதழ் போல எண்ணித் தாவினால் அற்றிடாத் தூற்றல் வரும் என்பதைக் காட்டி, கூரிய தூவி சூழ்ந்த தங்குமடலின் எல்லை மீறின் இகல்-வசை-மறம்-வெருள் ஆகிய நான்கும் பற்றுவதை எச்சரித்து, பச்சை மடலுள் கருவுறும் நிறைவால் செங்குடிவாழ்வை நிறுவி, உச்சிக்குள் கூம்பித் தன்பால் கருவுறும் ஆழ்வீரத்தால் செம்மைமேல் பண்பாகி, ஆழிசூழ் புவியில் தன் மண்ணில் நிலைக்கும் மண்மலர்போல் சீர்பெற்று, காட்டுப்புறத் தண்பூவாயினும் பிறசெடி நயவா மெய்ச்சீரை உணர்த்தும் கானாவாழைப்பூவின் வாழ்வியல் — பிறர் இல்லற வரம்பை மனத்தாலும் கண்ணாலும் தீண்டாத தூய்மையும் ஆழ்ந்த மனவீரமுமே மெய்யான இல்லற மாண்பு என்பதைக் குறள்கள் 141–150 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified floral, boundary, and amphicarpic designs of the Benghal Dayflower, Chapter 15 establishes fidelity to boundaries not as timid hesitation, but as the highest form of moral courage. Those grounded in righteous order never harbor delusion toward another's spouse (141); among all who stray from virtue, lurking at another's gate is the supreme folly (142); violating the home of trusting friends reduces a living person to a lifeless corpse (143); lofty stature means nothing without even an atom of boundary discernment (144); treating trespass as a light, fleeting indulgence brings undying public infamy (145); crossing a guarded threshold binds four relentless curses—enmity, disgrace, sin, and dread—permanently to the offender (146); true domestic righteousness rests in being completely free of desire for another's partner (147); refusing even a covetous glance is deep valor that surpasses ordinary virtue as perfected character (148); uprightly never touching another's spouse marks those truly worthy of every blessing on earth (149); and even amid lesser human failings, honoring the sanctity of another's domestic boundary remains genuine goodness (150).",
+        architecturalArc: [
+            {
+                range: "141–143",
+                phase: "Order, Folly & Betrayal",
+                traits: "Self-contained green spathe • Non-parasitic ground creeper • Fragile petals collapsing at rough touch"
+            },
+            {
+                range: "144–146",
+                phase: "Discernment & Four Curses",
+                traits: "Rising high without breaking bract limit • Fleeting morning petal vs. lasting decay • Bristled protective spathe rim"
+            },
+            {
+                range: "147–149",
+                phase: "Valor & Pure Lineage",
+                traits: "Sealed inner & subterranean conception • Midday inward self-pollinating fold • Soil-anchored underground blooms"
+            },
+            {
+                range: "150",
+                phase: "Enduring Sanctity",
+                traits: "Wild, untamed cool dayflower that still refuses to parasitize another plant's host"
+            }
+        ],
+        greenThinkingPrinciple:
+            "Healthy ecosystems survive because every organism honors its ecological niche—draw nourishment from your own lawful soil, never parasitize another's shelter, and treat self-governed respect for boundaries as the highest form of strength.",
+        kurals: [
+            {
+                kuralNumber: 141,
+                line1: "கானமலர் தன்மடலில் வாழ்வொப்ப மாநெறியோர்",
+                line2: "ஊனமயல் வேற்றிணைமேல் இன்று.",
+                tamilPorul:
+                    "கானாவாழை மலர் பிற செடிகளின் எல்லையை மீறாமல் தன் பச்சைப் புல்லி மடலுக்குள்ளேயே ஒழுங்காக மலர்ந்து வாழ்வதைப் போல, உலகின் உயர்ந்த அறமும் பொருளும் உணர்ந்த மாநெறியோரிடம் பிறர் வாழ்க்கைத் துணையை விரும்பும் ஊனமான மயக்கம் ஒருபோதும் இல்லை.",
+                meaning:
+                    "Engineered to bloom strictly inside its own folded green spathe without encroaching on neighboring plants, the Benghal Dayflower honors spatial order effortlessly. Among those who truly comprehend virtue and righteous order in the world, the flawed folly of coveting another's spouse simply does not exist."
+            },
+            {
+                kuralNumber: 142,
+                line1: "படர்கொடி வேறொட்டாப் பாங்கற்றோர் தம்முள்",
+                line2: "மடமிகும் வேற்றுவாயில் காப்பு.",
+                tamilPorul:
+                    "மென்மையாக மண்ணில் படரும் கானாவாழைக்கொடி பிற மரங்களின் தண்டில் ஒட்டி அவற்றின் சத்தை உறிஞ்சாத நற்பாங்கினை இழந்து அறநெறியின் புறத்தே நிற்போர் எல்லாரிலும், பிறர் வீட்டு வாயிலைக் காத்துப் பதுங்கி நிற்பவரை விடப் பெருமடமையர் எவரும் இல்லை.",
+                meaning:
+                    "Unlike parasitic vines that latch onto neighboring trunks to drain another's sap, the creeping Benghal Dayflower stays humbly on its own damp earth without clinging to another host. Even among all who stand outside the path of virtue, no folly surpasses lurking covertly at another's doorstep."
+            },
+            {
+                kuralNumber: 143,
+                line1: "தீண்டக் கரைபூப்போல் நட்டார் அகங்கெடுப்போர்",
+                line2: "மாண்டார் உயிரற்ற கூடு.",
+                tamilPorul:
+                    "மென்மையான கானாவாழை நீலவிதழ்களை முரட்டுத்தனமாகத் தீண்டிய கணத்திலேயே அவை உயிரோட்டமின்றி நீராகக் கரைந்து சிதைவது போல, தம்மைத் தெளிவாக நம்பிய நண்பர்களின் இல்லத்தைக் கெடுத்துத் துரோகம் செய்வோர் செத்து மாண்டவரின் உயிரற்ற உடற்கூட்டிற்குச் சமமானவரே ஆவர்.",
+                meaning:
+                    "So delicate is the sanctity of the Dayflower's sky-blue petals that a single rough violation collapses them instantly into lifeless watery pulp. Those who commit treachery against the home of friends who trusted them are no different from the lifeless, empty shells of the dead."
+            },
+            {
+                kuralNumber: 144,
+                line1: "புல்லியுள் பூப்போல் உயர்ந்தெவன் வேற்றகத்துச்",
+                line2: "சில்லணுவும் ஓரான் கடப்பு.",
+                tamilPorul:
+                    "தன் பச்சைப் புல்லி மடலுக்குள்ளிருந்து நீலமலர் மேலே நிமிர்ந்து உயர்ந்தாலும் தன் எல்லை வரம்பைக் கடக்காதது போல, உலகில் எத்துணை உயர்ந்த பெருமை உடையவராக இருந்தாலும் நுண்ணிய அணுவளவு கூட ஆராய்ந்து உணராமல் பிறர் இல்லத்தின் வரம்பைக் கடப்பதால் என்ன பயன்?",
+                meaning:
+                    "Though its twin periwinkle petals rise prominently aloft above its folded bract cup, the blossom never oversteps the fine bristled boundary guarding its base. However lofty a person's stature or greatness may appear, it counts for nothing if they cross into another's sanctuary without even an atom of discernment."
+            },
+            {
+                kuralNumber: 145,
+                line1: "சிற்றிதழ் நொய்தாய் அயல்வீடு தாவியோர்க்கு",
+                line2: "அற்றிடாத் தூற்றல் உறும்.",
+                tamilPorul:
+                    "காலையில் சில மணிநேரமே தோன்றி மறையும் கானாவாழையின் சிற்றிதழைப் போல எளிமையான நொய்மையான செயல் என்று எண்ணிப் பிறர் வீட்டின் எல்லையைத் தாவி மீறுவோர்க்கு, எக்காலத்தும் அற்றுப்போகாத நிலைத்த பழித்தூற்றலே வந்து சேரும்.",
+                meaning:
+                    "Opening for only a few brief morning hours before dissolving, the Dayflower's small petal might look fleeting, yet violating its stem invites lasting decay. Anyone who trespasses into another's home thinking the act is light, brief, and easy incurs an undying reproach that never fades."
+            },
+            {
+                kuralNumber: 146,
+                line1: "தங்குமடல் மீறின் இகல்வசை வெம்மறம்",
+                line2: "பொங்கும் வெருள்நாலும் பற்று.",
+                tamilPorul:
+                    "தன் அரும்புகள் தங்கும் பச்சைப் புல்லி மடலின் விளிம்பில் கூரிய பாதுகாப்புத் தூவிகள் சூழ்ந்திருக்கும் கானாவாழையின் வரம்பை மீறுவது போலப் பிறர் இல்லற வரம்பை மீறினால், பகையாகிய இகல், இழிவாகிய வசை, கொடிய பாவமாகிய வெம்மறம், பொங்கும் அச்சமாகிய வெருள் ஆகிய நான்கும் ஒருபோதும் நீங்காமல் பற்றிக்கொள்ளும்.",
+                meaning:
+                    "Guarded along the rim of its sheltering green spathe by dense bristly hairs evolved to repel intruders, the blossom warns against crossing protected limits. Breaching the sanctity of another's household binds four relentless curses to the trespasser forever: enmity, infamy, harsh sin, and surging dread."
+            },
+            {
+                kuralNumber: 147,
+                line1: "பச்சை மடலுள் கருமலர்போல் செங்குடியோன்",
+                line2: "இச்சை அயல்துணைமேல் அற்று.",
+                tamilPorul:
+                    "வெளியுலகை நாடாமல் தன் பச்சைப் புல்லி மடலுக்குள்ளும் தன் மண்ணுக்குள்ளும் அமைதியாகக் கருவுற்று நிறைவு காணும் கானாவாழை மலரைப் போல, பிறருக்கு உரிய வாழ்க்கைத் துணையின் மீது எவ்வித இச்சையும் கொள்ளாதவனே செம்மையான இல்லறக் குடிவாழ்வோன் ஆவான்.",
+                meaning:
+                    "Endowed with sealed subterranean cleistogamous flowers and a mucilage-cushioned inner spathe that mature viable seeds faithfully inside their own home boundary, the Benghal Dayflower finds complete fulfillment within its own threshold. He alone truly embodies righteous household life who harbors zero covetous desire toward another's partner."
+            },
+            {
+                kuralNumber: 148,
+                line1: "சூழ்மடல் போல்மற்றோர் தாரத்தைப் பாராத",
+                line2: "ஆழ்வீரம் செம்மைமேல் பண்பு.",
+                tamilPorul:
+                    "உச்சிப் பொழுது நெருங்கும் முன்பே தன் நீல இதழ்களை உள்ளே சுருக்கித் தன் மகரந்தத்தாலேயே கருவுற்றுப் பிற மலர்களை ஏறிட்டுப் பாராமல் சூழ்மடலுள் அடங்கும் கானாவாழையைப் போல, பிறர் மனைவியைக் காமக் கண்ணோடு பாராத ஆழ்ந்த மனவீரம் சான்றோர்க்கு வெறும் அறம் மட்டுமன்று; அது அறத்திற்கும் மேலான நிறைந்த நற்பண்பாகும்.",
+                meaning:
+                    "Folding its petals cleanly inward before midday so its own anthers touch its own stigma without ever leaning outward for foreign pollen, the blossom demonstrates quiet, sovereign self-mastery. The deep inner valor of never casting a covetous glance at another's wife is not merely ordinary virtue—it stands above it as perfected nobility of conduct."
+            },
+            {
+                kuralNumber: 149,
+                line1: "இப்புவியின் ஆழிசூழ் மண்மலர்போல் சீர்பெறுவோர்",
+                line2: "செப்பால் அயல்மெய் தொடார்.",
+                tamilPorul:
+                    "அலைவீசும் ஆழ்கடல் சூழ்ந்த இப்புவியில் தன் சொந்த மண்ணுக்குள்ளேயே வேரோடு பிணைந்து தூய வித்துகளை ஈனும் கானாவாழையின் மண்மலரைப் போல, எல்லா நலன்களையும் சீரையும் பெறுவதற்குத் தகுதியானவர் யார் எனின், செம்மையான நெறியால் பிறருக்கு உரியவரின் உடலை ஒருபோதும் தீண்டாதவரே ஆவர்.",
+                meaning:
+                    "Anchoring its hidden underground blooms strictly inside its own patch of earth across this vast ocean-ringed planet, the Dayflower secures enduring vitality without touching another plant's domain. On this sea-girt earth, those truly worthy of every blessing are they who, through steadfast uprightness, never touch another's spouse."
+            },
+            {
+                kuralNumber: 150,
+                line1: "நொய்ய பிழைகள் நிகழ்த்தினும் தண்பூப்போல்",
+                line2: "மெய்யாய் அயல்வேண்டாச் சீர்.",
+                tamilPorul:
+                    "எளிமையான காட்டுப் புறங்களில் தன்னியல்பாக வளர்ந்து சில குறைகளுக்கு ஆளானாலும் பிற செடிகளை ஒட்டுண்ணியாய் அழிக்காமல் தன் குளிர்ந்த வரம்பைக் காக்கும் தண்பூவான கானாவாழையைப் போல, வாழ்வில் சிறுமை தரும் பிற பிழைகளை நிகழ்த்தினாலும் பிறர் வரம்பிற்குள் உள்ள துணையை விரும்பாமல் இருத்தல் மெய்யான நற்சீராகும்.",
+                meaning:
+                    "Even growing wild and untamed along rugged village margins where it faces constant neglect, the cool, moisture-rich Dayflower never turns parasitic or steals another plant's support. Even if one falters into lesser wrongs outside virtue's perfection, refraining genuinely from coveting one who belongs within another's boundary remains true goodness."
+            }
+        ]
+    },
+
+    // ======================================================================
+    // CHAPTER 16: பொறையுடைமை — நெருஞ்சிப்பூ (Kurals 151–160)
+    // ======================================================================
+    {
+        chapterNumber: 16,                      // Automatically loads images/16.jpg -> Pillar 01 -> Iyal 02 (இல்லறவியல்)
+        tamilTitle: "பொறையுடைமை — நெருஞ்சிப்பூ",
+        chapterTitle: "The Possession of Patience (Forbearance) – The Nerunji Blossom",
+        flowerName: "The Nerunji Blossom (நெருஞ்சிப்பூ)",
+        tamilSummary:
+            "வழியோரக் காலடியை ஏற்றும் மறுநாள் எழுந்து, மிதியேற்ற தழும்பின்றிப் பிழை கருதாது மலர்ந்து, வறண்ட பாதையிலும் தேன்மறுக்காமல் அறிவிலாரை ஏற்று, மண்ணோடு தவழ்கொடியாய் நின்று சால்பு குன்றாது தணிவுநெறி பேணி, கடிந்தோர் இன்றி ஆர்ந்தோர் கொடிமணியாய் அகத்துள் காக்கப்பட்டு, பூப்பொழுதைக் கடந்து ஓய்ந்திடா வித்தென நிலைத்த பேர் பெற்று, நஞ்சற்ற தண்பூவாய்க் குளிர் மருந்தாகிப் பாவம் தவிர்த்து, தாழ்மலர்போல் செம்பண்பால் வாகை கொண்டு, வீதிப்புழுதியிலும் மாசற்ற சீரோடு மாதவரினும் உயர்ந்து, கார்மழை காத்திருக்கும் பசித்தவத்தினும் மேலாய்க் கசப்புரை ஏற்போரின் பெருமையை உணர்த்தும் நெருஞ்சிப்பூவின் வாழ்வியல் — மிதிபட்டாலும் நிமிர்ந்து நலம் தரும் பொறுமையும் பிழைமறக்கும் பெருந்தன்மையுமே மெய்யான வலிமையும் தூய்மையும் என்பதைக் குறள்கள் 151–160 வழியே மெய்ப்பிக்கிறது.",
+        summary:
+            "Across ten verified structural, seasonal, and medicinal designs of the Nerunji Blossom, Chapter 16 reveals patience not as passive surrender, but as unbreakable living strength. Bearing detractors calmly like a trampled blossom rising at dawn is life's supreme virtue (151); enduring wrongs is good, yet releasing them completely from memory is higher nobility (152); denying hospitality is the worst poverty while bearing the ignorant is the highest strength (153); hugging the ground in calm forbearance preserves fullness of character intact (154); the wise disregard retaliators and treasure the patient like bright gold on the vine (155); vengeance brings a fleeting flower-day's thrill while forbearance earns renown as enduring as a drought-proof seed (156); answering unjust injury without venom—and with compassionate restraint—keeps one free from sin (157); low-lying composure conquers arrogant excess through pure character (158); staying spotless amid roadside harsh speech surpasses the purity of secluded ascetics (159); and even austere dry-season fasting ranks second to patiently enduring the bitter words of others (160).",
+        architecturalArc: [
+            {
+                range: "151–153",
+                phase: "Endurance & Strength",
+                traits: "Trampled stem rising at dawn • Unscarred morning bloom • Generous open nectar cup under heavy feet"
+            },
+            {
+                range: "154–156",
+                phase: "Poise & Lasting Renown",
+                traits: "Ground-hugging five-petal balance • Treasured golden vine vs. stinging weeds • Ephemeral petal vs. drought-proof seed"
+            },
+            {
+                range: "157–159",
+                phase: "Compassion & Purity",
+                traits: "Venomless cooling medicinal sap • Low-lying victory over tall excess • Grit-shedding silky hairs on dusty roads"
+            },
+            {
+                range: "160",
+                phase: "Supreme Austerity",
+                traits: "Rainless monsoon-awaiting dormancy outranked only by enduring bitter human speech"
+            }
+        ],
+        greenThinkingPrinciple:
+            "True resilience does not waste energy fighting every footstep—hug the earth firmly, shed roadside grit without growing bitter, outlast arrogance through quiet regeneration, and let patient endurance turn pressure into lasting continuity.",
+        kurals: [
+            {
+                kuralNumber: 151,
+                line1: "காலடி ஏற்றும் மறுநாள் எழுமலர்",
+                line2: "ஏலார் வசையாற்றல் மேல்.",
+                tamilPorul:
+                    "ஊர் வழியோரங்களில் நடப்போரின் காலடி அழுத்தத்தை அமைதியாக ஏற்றுத் தாங்கிய பின்னும், சினமோ சிதைவோ இன்றி மறுநாள் காலையில் மீண்டும் புத்தொளியோடு மலர்ந்து எழும் நெருஞ்சி மலரைப் போல, தம்மை இகழ்ந்து பழிக்கும் ஏலாரின் வசைகளை ஆற்றிப் பொறுத்தலே எல்லா அறங்களினும் மேலானதாகும்.",
+                meaning:
+                    "Engineered with flexible prostrate stems hugging village paths, the Nerunji blossom absorbs the crushing pressure of passing footsteps without snapping and lifts fresh golden blooms again the very next dawn. Just as this resilient ground flower bears every footstep calmly, enduring the scorn of detractors stands as life's foremost virtue."
+            },
+            {
+                kuralNumber: 152,
+                line1: "நெருஞ்சி மிதியேற்றல் போற்பிழை ஆற்றல்",
+                line2: "கருதாமை மேலாய மாண்பு.",
+                tamilPorul:
+                    "நெருஞ்சிப் பூச்செடி தன்மேல் படும் மிதியை அமைதியாக ஏற்றுக்கொண்டு, மறுநாள் எவ்விதக் கசப்போ தழும்போ இன்றி மலர்வது போல, பிறர் செய்த பிழைகளை எப்போதும் ஆற்றிப் பொறுத்தல் நன்மையே; அதனை உள்ளத்தில் சிறிதும் கருதாமல் மறந்துவிடுதல் அதனினும் மேலான மாண்பாகும்.",
+                meaning:
+                    "After taking the weight of heavy boots along monsoon lanes, Nerunji opens clean, unscarred petals at sunrise as though no pressure ever occurred. Always bear with the wrongs inflicted by others—yet letting them go completely from memory is an even higher nobility."
+            },
+            {
+                kuralNumber: 153,
+                line1: "வறுமையுள் தேன்மறுப்பே புன்மை உரத்துள்",
+                line2: "அறிவிலார் ஏற்றல் திறம்.",
+                tamilPorul:
+                    "வறண்ட பாதையிலும் மிதிபட்ட பின்னரும் தேன்நாடி வரும் சிறு பூச்சிகளை விலக்காமல் இதழ் விரிக்கும் நெருஞ்சி உணர்த்துவது போல, வறுமையுள் கொடிய புன்மை விருந்தாகிய தேனீகையை மறுத்தலாகும்; வலிமையுள் மிகச்சிறந்த திறம் அறிவற்றவர் செய்யும் பிழைகளை அமைதியாக ஏற்றுக்கொள்ளுதலாகும்.",
+                meaning:
+                    "Even on lean, trampled village margins, Nerunji keeps its open yellow cup generous to tiny bees and ants while absorbing thoughtless footsteps without shattering. The bleakest poverty within poverty is refusing hospitality to arriving guests, and the greatest strength within strength is enduring the folly of the ignorant."
+            },
+            {
+                kuralNumber: 154,
+                line1: "தவழ்கொடி போல்சால்பு குன்றாமை நாடின்",
+                line2: "உவந்து தணிவுநெறி பேண்.",
+                tamilPorul:
+                    "உயர்ந்து சாயாமல் மண்ணோடு ஒட்டித் தவழும் கொடியால் தன் ஐந்திதழ் முழுமையைப் புயலிலும் குன்றாமல் காத்துக்கொள்ளும் நெருஞ்சியைப் போல, தம்மிடமுள்ள நிறைவான நற்சால்பு எக்காலத்தும் குன்றாமல் நிலைக்க வேண்டுமாயின், உள்ளம் உவந்து தணிவுநெறியாகிய பொறுமையைப் பேணுக.",
+                meaning:
+                    "By staying low along the earth on creeping stems rather than straining rigidly into fierce monsoon gusts, Nerunji preserves its crisp five-petaled symmetry intact. If you desire that fullness of noble character never diminish, gladly cherish and guard the path of calm forbearance."
+            },
+            {
+                kuralNumber: 155,
+                line1: "கடிந்தோரை மேலோர் மதியாரே ஆர்ந்தோர்",
+                line2: "கொடிமணியாய்க் காப்பர் அகத்து.",
+                tamilPorul:
+                    "சுள்ளெனக் காயப்படுத்தும் களைச்செடிகளை உலகம் அகற்றி ஒதுக்குவதும், மிதித்தாலும் அமைதியாகப் பூக்கும் நெருஞ்சியைப் பொன்நிறக் கொடிமணியாய் மருந்தெனப் போற்றுவதும் போல, பழிதீர்த்துக் கடிந்தோரை மேலோர் ஒருபோதும் மதியார்; அமைதியாக ஆர்ந்தோரைத் தம் அகத்துள் அரிய மணியெனப் போற்றிக் காப்பர்.",
+                meaning:
+                    "While aggressive stinging weeds are uprooted without regard, the humble golden Nerunji—enduring roadside trampling while offering valued cooling medicine—is prized like bright gold on the vine. The wise attach no worth to those who strike back in retaliation, whereas they treasure the forbearing deep within their heart like a priceless jewel."
+            },
+            {
+                kuralNumber: 156,
+                line1: "காய்ந்தோர்க்குப் பூப்பொழுதே பூரிப்பு ஆற்றினர்க்கு",
+                line2: "ஓய்ந்திடா வித்தொக்கும் பேர்.",
+                tamilPorul:
+                    "சினத்தால் காய்ந்து பழிதீர்ப்போர்க்குக் கிடைக்கும் பூரிப்பு ஒரு மலரின் சிறு பூப்பொழுதைப் போல ஒரு நாளுக்கு மட்டுமே நிலைக்கும்; ஆனால் பொறுமையுடன் ஆற்றினர்க்குக் கிடைக்கும் நற்பேர், கடும் கோடையையும் கடந்து அழியாமல் மீண்டும் முளைக்கும் நெருஞ்சியின் வித்தை ஒத்து எக்காலத்தும் ஓய்ந்திடாமல் நிலைக்கும்.",
+                meaning:
+                    "Retaliation's brief surge of satisfaction fades as quickly as a single ephemeral petal, whereas Nerunji's tough, patient seed capsules endure scorching droughts across seasons to renew life again and again. For those who avenge, exhilaration lasts barely a day; for those who forbear, renown endures unendingly like an imperishable seed."
+            },
+            {
+                kuralNumber: 157,
+                line1: "நஞ்சற்ற தண்பூப்போல் தீங்கயலார் ஆற்றினும்",
+                line2: "நெஞ்சுருகிப் பாவம் தவிர்.",
+                tamilPorul:
+                    "கசக்கி மிதிக்கப்பட்டாலும் கடுமையான நஞ்சுப்பால் கக்காமல் உடலின் உள்வெப்பத்தைத் தணிக்கும் குளிர்ந்த மருந்தாகத் திகழும் நஞ்சற்ற தண்பூவான நெருஞ்சியைப் போல, அயலார் தகுதியற்ற தீங்கைத் தனக்கு ஆற்றினாலும் அவர் அடையும் துன்பத்திற்காக நெஞ்சுருகிப் பழிசெய்யும் பாவத்தைத் தவிர்க்க.",
+                meaning:
+                    "Even when crushed underfoot, Nerunji never secretes caustic venom; instead, its cool, soothing medicinal properties dissolve burning internal heat and stone-like affliction. Even when others inflict unmerited injury upon you, let your heart melt with compassion for the harm they bring upon themselves and refrain from unrighteous retaliation."
+            },
+            {
+                kuralNumber: 158,
+                line1: "வம்பால் கொடுமை இழைத்தாரைத் தாழ்மலர்போல்",
+                line2: "செம்பண்பால் வாகை கொளல்.",
+                tamilPorul:
+                    "வீண் ஆணவத்தால் வம்புசெய்து கொடுமை இழைத்தோரைப் பதிலுக்குத் தாக்காமல், பாதையின் தரையில் பணிவாகத் தாழ்ந்து மலர்ந்தும் எதனாலும் அழியாது வெல்லும் தாழ்மலரான நெருஞ்சியைப் போல, தம்முடைய செம்மையான நற்பண்பாலேயே அமைதியாக வாகை கொள்க.",
+                meaning:
+                    "Refusing to wrestle tall, boastful weeds or snap against heavy boots, the low-lying golden Nerunji outlasts every disturbance through pure, grounded resilience. Overcome those who commit arrogant wrongs out of bloated pride not by matching their fury, but by winning serene triumph through your own noble composure."
+            },
+            {
+                kuralNumber: 159,
+                line1: "வீதிப்பூ ஒப்பக் கடுமொழி ஆற்றுவோர்",
+                line2: "மாதவரின் மாசற்ற சீர்.",
+                tamilPorul:
+                    "புழுதியும் சேறும் நிறைந்த ஊர் வீதியோரத்தில் வளர்ந்தாலும் தன் நுண்தூவி இலைகளால் அழுக்குப் படியாமல் தூய பொன்நிறமாய்ப் பொலியும் வீதிப்பூவான நெருஞ்சியை ஒப்ப, நெறிதவறியோரின் கடுமொழிகளை அமைதியாக ஆற்றுவோர் காட்டில் தவம் புரியும் மாதவரைக் காட்டிலும் மாசற்ற சீருடையவர் ஆவர்.",
+                meaning:
+                    "Blooming along dusty, mud-splashed village thoroughfares yet shedding grit cleanly off its fine silky hairs to display unstained golden petals, the roadside flower stays purer amid traffic than a sheltered mountain bloom. Those who calmly bear the harsh, unrestrained words of others attain a spotless purity surpassing even secluded ascetics."
+            },
+            {
+                kuralNumber: 160,
+                line1: "பசித்தவம் கார்ப்பூப்போல் ஓம்புவோர் மேலோர்",
+                line2: "கசப்புரை ஏற்பார் அடுத்து.",
+                tamilPorul:
+                    "மழையும் நீருமின்றி வறண்ட கோடை மாதங்களில் எல்லாம் உணவற்றுப் பொறுமையோடு காத்திருந்து, கார்மழை வந்தவுடனே புத்துயிர் பெற்றுப் பூக்கும் கார்ப்பூவான நெருஞ்சியைப் போலப் பசித்தவம் ஓம்புவோர் மேலானவர்களே; ஆயினும் அவர்கள் பிறர் கூறும் கசப்புரையை அமைதியாக ஏற்பவர்களுக்கு அடுத்த நிலையினரே ஆவர்.",
+                meaning:
+                    "Surviving rainless, sun-baked months in austere dormancy without moisture or nourishment until monsoon showers return, Nerunji embodies extraordinary biological fasting. Those who practice ascetic fasting without food are truly great—yet they rank second, right after those who patiently endure the bitter speech of others."
+            }
+        ]
     }
+
+
+
+
+
 
 
 
