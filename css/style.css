@@ -3555,3 +3555,91 @@ body {
     margin-top: 3px;
     line-height: 1.45;
 }
+
+
+/* ==========================================================================
+   25. MOBILE KURAL CONTAINMENT FIX (Zero Overflow on Phones, Desktop Untouched)
+       Fixes flex width leak & reclaims nested side padding on small screens
+   ========================================================================== */
+
+/* --- 1. Lock Flex Widths so Verses Can Never Escape Their Container --- */
+.frame-kural-top {
+    width: 100%;
+    max-width: 100%;
+}
+
+.frame-kural-verse-wrap {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.chapter-card .frame-kural-verse-wrap {
+    width: 100%;
+}
+
+.frame-kural-verse {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .chapter-modal-card .frame-kural-verse-wrap {
+        width: 100%;
+    }
+}
+
+/* --- 2. Mobile Phone Layout (≤ 640px): Reclaim Width & Prevent Any Overflow --- */
+@media (max-width: 640px) {
+    /* Reclaim outer section & modal horizontal padding */
+    .databank-section {
+        padding: 48px 10px 72px 10px;
+    }
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .chapter-modal-card {
+        max-width: 100%;
+        padding: 20px 10px;
+    }
+
+    /* Tighten nested card paddings to give Tamil couplets ~100px extra room */
+    .chapter-card-body {
+        padding: 12px 10px 16px 10px;
+    }
+
+    .frame-kural-enclosure,
+    .chapter-card .frame-kural-enclosure {
+        padding: 12px 10px;
+    }
+
+    .frame-kural-unit,
+    .chapter-card .frame-kural-unit {
+        padding: 12px 10px;
+    }
+
+    .frame-porul-box,
+    .frame-meaning-box {
+        padding: 12px;
+    }
+
+    /* Hide duplicate [1] seal on mobile — "குறள் : 1 Kural : 1" is already above */
+    .frame-kural-seal {
+        display: none;
+    }
+
+    /* Keep readable Tamil sizing & wrap cleanly inside box if a 4-word line is extra long */
+    .chapter-card .frame-kural-verse,
+    .chapter-modal-card .frame-kural-verse,
+    .kural-line,
+    .footer-kural-line {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        overflow-x: visible;
+        font-size: clamp(0.84rem, 3.6vw, 0.98rem);
+        line-height: 1.85;
+    }
+}
